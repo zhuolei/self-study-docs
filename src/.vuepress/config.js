@@ -101,16 +101,18 @@ var nav = getNav();
 function genSideBar() {
     var sidebars = {};
     var allDirs = filehelper.getAllDirs(rootpath);
-    console.log(':::allDirs:::',allDirs);
+    console.log(':::alldirs:::', allDirs);
+
     allDirs.forEach(item => {
         let dirFiles = filehelper.getAllFiles(item);
-        console.log(':::dirFiles:::', dirFiles);
         let dirname = item.replace(rootpath, "");
+        if (dirname.startsWith('\\')) {
+            dirname = dirname.replace('\\', '\/');
+        }
         navLinks.push(dirname);
         if ((dirFiles.length > 1)) {
             sidebars[dirname] = dirFiles;
         }
-        console.log(':::sidebars:::', sidebars);
     });
 
     sidebar = sidebars
