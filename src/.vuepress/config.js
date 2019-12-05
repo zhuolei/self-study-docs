@@ -57,7 +57,7 @@ const filehelper = {
             fullpath = rpath + "/" + file;
             var fileinfo = fs.statSync(fullpath);
             // 过滤 .DS_Store
-            if (fileinfo.isFile() && !str.contains(file,"DS_Store",true)) {
+            if (fileinfo.isFile() && !str.contains(file,"DS_Store",true) && file.endsWith('md')) {
                 if (file === 'README.md' || file === 'readme.md') {
                     file = '';
                 } else {
@@ -109,7 +109,8 @@ function genSideBar() {
         if (dirname.startsWith('\\')) {
             dirname = dirname.replace('\\', '\/');
         }
-        navLinks.push(dirname);
+        console.log(':::dirname:::', dirname);
+        if(!dirname.endsWith('img/')) navLinks.push(dirname);
         if ((dirFiles.length > 1)) {
             sidebars[dirname] = dirFiles;
         }
@@ -126,6 +127,7 @@ function genSideBar() {
 function genNavLink(filepaths) {
     genSideBar();
     var navLinks = [];
+    console.log(':::filepaths:::', filepaths);
     filepaths.forEach(p => {
         var ss = p.toString().split("/");
         var name = ss[ss.length - 2];
@@ -171,6 +173,7 @@ function sortDir(a, b) {
  */
 
 function getNav() {
+    console.log(':::navLinks:::', navLinks);
     let nnavs = genNavLink(navLinks);
     nnavs.sort(sortDir);
     var iniMap = {};
