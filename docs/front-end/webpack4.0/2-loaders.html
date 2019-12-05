@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Loaders | Self Study</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.8d7375dd.css" as="style"><link rel="preload" href="/assets/js/app.d612337b.js" as="script"><link rel="preload" href="/assets/js/2.5efe570b.js" as="script"><link rel="preload" href="/assets/js/12.757f550d.js" as="script"><link rel="prefetch" href="/assets/js/10.f770a7cb.js"><link rel="prefetch" href="/assets/js/11.23055f0b.js"><link rel="prefetch" href="/assets/js/13.f91b29b9.js"><link rel="prefetch" href="/assets/js/14.60fdadd7.js"><link rel="prefetch" href="/assets/js/15.4bcc7f4c.js"><link rel="prefetch" href="/assets/js/16.e329ca8e.js"><link rel="prefetch" href="/assets/js/17.794f6c4f.js"><link rel="prefetch" href="/assets/js/18.4a26d176.js"><link rel="prefetch" href="/assets/js/3.b92fdbbd.js"><link rel="prefetch" href="/assets/js/4.2bea7e61.js"><link rel="prefetch" href="/assets/js/5.646a97f8.js"><link rel="prefetch" href="/assets/js/6.2f8bad47.js"><link rel="prefetch" href="/assets/js/7.c2d9597a.js"><link rel="prefetch" href="/assets/js/8.db5923e4.js"><link rel="prefetch" href="/assets/js/9.0a54660a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8d7375dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Self Study</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Algorithm/" class="nav-link">Algorithm</a></div><div class="nav-item"><a href="/Projects/" class="nav-link">Projects</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">nodejs</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/ts-axios/" class="nav-link">ts-axios</a></li><li class="dropdown-item"><!----> <a href="/front-end/webpack4.0/" class="nav-link router-link-active">webpack4.0</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Algorithm/" class="nav-link">Algorithm</a></div><div class="nav-item"><a href="/Projects/" class="nav-link">Projects</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">nodejs</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/ts-axios/" class="nav-link">ts-axios</a></li><li class="dropdown-item"><!----> <a href="/front-end/webpack4.0/" class="nav-link router-link-active">webpack4.0</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/front-end/webpack4.0/" class="sidebar-link">What is Webpack</a></li><li><a href="/front-end/webpack4.0/0-prepare.html" class="sidebar-link">Installation</a></li><li><a href="/front-end/webpack4.0/1-concepts.html" class="sidebar-link">Concepts</a></li><li><a href="/front-end/webpack4.0/2-loaders.html" class="active sidebar-link">Loaders</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front-end/webpack4.0/2-loaders.html#bundle-static-files-file-loader" class="sidebar-link">Bundle static files (file-loader)</a></li><li class="sidebar-sub-header"><a href="/front-end/webpack4.0/2-loaders.html#bundle-static-files-url-loader" class="sidebar-link">Bundle static files (url-loader)</a></li><li class="sidebar-sub-header"><a href="/front-end/webpack4.0/2-loaders.html#bundle-static-files-style-loader-css-loader" class="sidebar-link">Bundle static files (style-loader &amp;&amp; css-loader)</a></li><li class="sidebar-sub-header"><a href="/front-end/webpack4.0/2-loaders.html#bundle-static-files-sass-loader-postcss-loader" class="sidebar-link">Bundle static files (sass-loader &amp;&amp; postcss-loader)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front-end/webpack4.0/2-loaders.html#install" class="sidebar-link">Install</a></li><li class="sidebar-sub-header"><a href="/front-end/webpack4.0/2-loaders.html#usage" class="sidebar-link">Usage</a></li></ul></li></ul></li><li><a href="/front-end/webpack4.0/3-plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/front-end/webpack4.0/4-entry&amp;output.html" class="sidebar-link">Entry &amp;&amp; Output</a></li><li><a href="/front-end/webpack4.0/5-sourcemap.html" class="sidebar-link">Devtool</a></li><li><a href="/front-end/webpack4.0/8-babel.html" class="sidebar-link">Babel</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="loaders"><a href="#loaders" class="header-anchor">#</a> Loaders</h1> <h2 id="bundle-static-files-file-loader"><a href="#bundle-static-files-file-loader" class="header-anchor">#</a> Bundle static files (file-loader)</h2> <p>First install file loader</p> <div class="language-js extra-class"><pre class="language-js"><code>npm i file<span class="token operator">-</span>loader <span class="token operator">-</span><span class="token constant">D</span> <span class="token comment">// -D == --save-dev</span>
+</code></pre></div><p><code>webpack.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+  entry<span class="token punctuation">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.(jpg | png | gif))$/</span><span class="token punctuation">,</span> 
+      use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token comment">// ext is placeholder for extension</span>
+          <span class="token comment">// this means keep same file name after bundled</span>
+          name<span class="token punctuation">:</span> <span class="token string">'[name].[ext]'</span><span class="token punctuation">,</span>
+          <span class="token comment">// outputPath means image file will be bundled into ./dist/images/ folder</span>
+          outputPath<span class="token punctuation">:</span> <span class="token string">'images/'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.(eot | ttf | svg))$/</span><span class="token punctuation">,</span> <span class="token comment">// use file loader to bundle font file</span>
+      use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'file-loader'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Learn more about loader <a href="https://webpack.js.org/loaders/" target="_blank">here</a>.
+How to bundle font file, you can check mukewang webpack course 3-4 or <a href="https://webpack.js.org/guides/asset-management/" target="_blank">here</a>.</p></div> <h2 id="bundle-static-files-url-loader"><a href="#bundle-static-files-url-loader" class="header-anchor">#</a> Bundle static files (url-loader)</h2> <p>url-loader will use base64 convert picture and put it directly in bundle.js, url-loader is more likely used when the size of jpg file is really small and it will reduce number of http request, otherwise it will more time to load bundle.js file</p> <p><code>webpack.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+  entry<span class="token punctuation">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.(jpg | png | gif))$/</span><span class="token punctuation">,</span> 
+      use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'[name]_[hash].[ext]'</span><span class="token punctuation">,</span>
+          outputPath<span class="token punctuation">:</span> <span class="token string">'images/'</span><span class="token punctuation">,</span>
+          limit<span class="token punctuation">:</span> <span class="token number">2048</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p style="background-color:#ffffcc;padding-left:10px;">when picture file bigger than 2kb, <i>url-loader</i> will behave like <i>file-loader</i></p> <h2 id="bundle-static-files-style-loader-css-loader"><a href="#bundle-static-files-style-loader-css-loader" class="header-anchor">#</a> Bundle static files (style-loader &amp;&amp; css-loader)</h2> <p>The <code>css-loader</code> interprets @import and url() like import/require() and will resolve them, it will analyze the relationship between all css files</p> <p>First install these two loaders</p> <div class="language-js extra-class"><pre class="language-js"><code>npm install style<span class="token operator">-</span>loader css<span class="token operator">-</span>loader <span class="token operator">-</span><span class="token constant">D</span>
+</code></pre></div><p><code>index.css</code></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.avatar</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>index.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> avatar <span class="token keyword">from</span> <span class="token string">'./avatar.jpg'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./index.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> avatar<span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'avatar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+</code></pre></div><p><code>webpack.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+  entry<span class="token punctuation">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.(jpg | png | gif))$/</span><span class="token punctuation">,</span> 
+      use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'[name].[ext]'</span><span class="token punctuation">,</span>
+          outputPath<span class="token punctuation">:</span> <span class="token string">'images/'</span><span class="token punctuation">,</span>
+          limit<span class="token punctuation">:</span> <span class="token number">1024</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span>
+      use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="bundle-static-files-sass-loader-postcss-loader"><a href="#bundle-static-files-sass-loader-postcss-loader" class="header-anchor">#</a> Bundle static files (sass-loader &amp;&amp; postcss-loader)</h2> <h3 id="install"><a href="#install" class="header-anchor">#</a> Install</h3> <div class="language-js extra-class"><pre class="language-js"><code>npm install sass<span class="token operator">-</span>loader node<span class="token operator">-</span>sass postcss<span class="token operator">-</span>loader autoprefixer <span class="token operator">-</span><span class="token constant">D</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Inorder to use sass-loader, you need to install sass-loader node-sass both</p></div> <h3 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h3> <p><code>index.scss</code></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token selector">.avatar</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>postcss.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span> <span class="token comment">// autoprefixer plugin: add prefix -webkit- to css</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>webpack.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+  entry<span class="token punctuation">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.(jpg | png | gif))$/</span><span class="token punctuation">,</span> 
+      use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'[name].[ext]'</span><span class="token punctuation">,</span>
+          outputPath<span class="token punctuation">:</span> <span class="token string">'images/'</span><span class="token punctuation">,</span>
+          limit<span class="token punctuation">:</span> <span class="token number">1024</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span>
+      use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token string">'sass-loader'</span><span class="token punctuation">]</span> <span class="token comment">// execute order from right to left</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Remeber, loader execution order is from right to left, so sass-loader go first, css-loader will be second, the last one is style-loader</p></div> <p>When <code>index.scss</code> <code>@import</code> a <code>avatar.scss</code> file, you need to add option property to css-loader</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span>
+  use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'style-loader'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      loader<span class="token punctuation">:</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span>
+      options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// other imported scss file in index.scss will still go through sass-loader/postcss-loader</span>
+        importLoaders<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> 
+        <span class="token comment">// css independently applied in different module, avoid global css</span>
+        modules<span class="token punctuation">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'sass-loader'</span><span class="token punctuation">,</span>
+    <span class="token string">'postcss-loader'</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>index.scss</code></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'./avatar.scss'</span><span class="token punctuation">;</span></span>
+<span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token selector">.avatar</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>createAvatar.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> avatar <span class="token keyword">from</span> <span class="token string">'./avatar.jpg'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">createAvatar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  img<span class="token punctuation">.</span>src <span class="token operator">=</span> avatar<span class="token punctuation">;</span>
+  img<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'avatar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  root<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> createAvatar<span class="token punctuation">;</span>
+</code></pre></div><p><code>index.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> avatar <span class="token keyword">from</span> <span class="token string">'./avatar.jpg'</span><span class="token punctuation">;</span>
+<span class="token comment">// if module = true, need to change import code style</span>
+<span class="token keyword">import</span> style <span class="token keyword">from</span> <span class="token string">'./index.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> createAvatar <span class="token keyword">from</span> <span class="token string">'./createAvatar'</span><span class="token punctuation">;</span>
+
+<span class="token function">createAvatar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> avatar<span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>style<span class="token punctuation">.</span>avatar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/front-end/webpack4.0/1-concepts.html" class="prev">Concepts</a></span> <span class="next"><a href="/front-end/webpack4.0/3-plugins.html">Plugins</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d612337b.js" defer></script><script src="/assets/js/2.5efe570b.js" defer></script><script src="/assets/js/12.757f550d.js" defer></script>
+  </body>
+</html>
