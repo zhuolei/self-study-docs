@@ -213,6 +213,15 @@ var config = {
         nav: nav,
         sidebar: sidebar,
         sidebarDepth: 3
+    },
+    chainWebpack: config => {
+        // GraphQL Loader
+        config.module
+          .rule('bundle')
+          .test(/\.(jpg | png | gif)$/)
+          .use('file-loader')
+            .loader('file-loader')
+            .end()
     }
 }
 module.exports = config;
