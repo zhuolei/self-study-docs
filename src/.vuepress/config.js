@@ -206,13 +206,20 @@ function getNav() {
 console.log(':::nav:::', JSON.stringify(nav));
 console.log(':::sidebar:::', sidebar);
 var config = {
-    title: 'Self Study',
-    dest: 'docs',
-    docsDir: 'src',
-    themeConfig: {
-        nav: nav,
-        sidebar: sidebar,
-        sidebarDepth: 3
-    },
+  title: 'Self Study',
+  dest: 'docs',
+  docsDir: 'src',
+  themeConfig: {
+    nav: nav,
+    sidebar: sidebar,
+    sidebarDepth: 3
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': '../../assets'
+      }
+    }
+  }
 }
 module.exports = config;

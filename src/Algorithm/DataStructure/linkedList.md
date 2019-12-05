@@ -1,7 +1,7 @@
 # Linked List
 ## What is a Linked list?
 
-![img](../../assets/img/linkedlist.png)
+![img](~@/img/Linkedlist.png)
 
 ## Comparisions with Arrays
 `Lists`
