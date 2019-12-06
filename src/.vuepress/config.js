@@ -110,7 +110,7 @@ function genSideBar() {
             dirname = dirname.replace('\\', '\/');
         }
         console.log(':::dirname:::', dirname);
-        if(!dirname.endsWith('img/')) navLinks.push(dirname);
+        if(!dirname.endsWith('img/') && !dirname.startsWith('/asset')) navLinks.push(dirname);
         if ((dirFiles.length > 1)) {
             sidebars[dirname] = dirFiles;
         }
