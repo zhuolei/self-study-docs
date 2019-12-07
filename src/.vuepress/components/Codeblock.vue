@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .code-style {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   color: #476582;
