@@ -154,16 +154,67 @@ if (!Array.prototype.fill) {
 ## Array.find
 Array.prototype.find
 
-The `find()` method returns the value of the first element in the provided array that satisfies the provided testing function, otherwise, undefined is returned.
-
 - If you need the index of the found element in the array, use `findIndex()`.
 - If you need to find the index of a value, use `Array.prototype.indexOf()`. (It’s similar to findIndex(), but checks each element for equality with the value instead of using a testing function.)
 - If you need to find if a value exists in an array, use `Array.prototype.includes()`.
+
+### Return Value
+
+The `find()` method returns the value of the first element in the provided array that satisfies the provided testing function, otherwise, `undefined` is returned.
+
+
 
 ```js
 let find = [1, 2, 3].find((i) => {
   return i === 3;
 });
+```
+
+### Example
+
+#### Find an object in an array by one of its properties
+```js
+const inventory = [
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
+];
+
+function isCherries(fruit) { 
+  return fruit.name === 'cherries';
+}
+
+console.log(inventory.find(isCherries)); 
+// { name: 'cherries', quantity: 5 }
+```
+Using arrow function and destructuring
+```js
+const inventory = [
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
+];
+
+const result = inventory.find( ({ name }) => name === 'cherries' );
+
+console.log(result) // { name: 'cherries', quantity: 5 }
+```
+#### Find a prime number in a array
+The following example finds an element in the array that is a prime number (or returns `undefined` if there is no prime number):
+
+```js
+function isPrime(element, index, array) {
+  let start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
+}
+
+console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
 ### Polyfill
