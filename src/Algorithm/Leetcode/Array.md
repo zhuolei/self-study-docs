@@ -51,3 +51,7 @@ public int missingNumber(int[] nums) {
   int res = 0;
 }
 ```
+
+**Follow up**
+
+What if input is [1, 2, 3, 4, 5], output is 6?
