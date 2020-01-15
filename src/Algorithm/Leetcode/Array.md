@@ -238,6 +238,124 @@ public class Solution extends Relation {
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
+**Example 1:**
+
+<Codeblock>
+<p>
+Input: [1,2,3,4,5,6,7] and k = 3<br>
+Output: [5,6,7,1,2,3,4]<br>
+Explanation:<br>
+rotate 1 steps to the right: [7,1,2,3,4,5,6]<br>
+rotate 2 steps to the right: [6,7,1,2,3,4,5]<br>
+rotate 3 steps to the right: [5,6,7,1,2,3,4]<br>
+</p>
+</Codeblock>
+
+**Example 2:**
+
+<Codeblock>
+<p>
+Input: [-1,-100,3,99] and k = 2<br>
+Output: [3,99,-1,-100]<br>
+Explanation:<br>
+rotate 1 steps to the right: [99,-1,-100,3]<br>
+rotate 2 steps to the right: [3,99,-1,-100]<br>
+</p>
+</Codeblock>
+
+**Note:**
+
+- Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
+- Could you do it in-place with O(1) extra space?
+
+```java
+class Solution {
+  // solution1
+  // time: 0(n) space: 0(n)
+  // [1, 2, 3, 4, 5, 6, 7] k = 3
+  // 0 + 3 % 7 = 3
+  // [         1  2  3  4]
+  public void rotate(int[] nums, int k) {
+      int temp = new int[nums.length];
+      // 用取模的方法来找到数组里面各位数新的位置并将其存到temp数组里
+      for (int i = 0; i < nums.length; i++) {
+        temp[(i + k) % nums.length] = nums[i];
+      }
+      // 把temp数组重新赋值给回nums
+      for (int i = 0; i < nums.length; i++) {
+        nums[i] = temp[i];
+      }
+  }
+  // solution2
+  // time: 0(n) space: 0(1)
+  // [1, 2, 3, 4, 5, 6, 7] k = 3
+  // 用三层翻转法
+  // 1. reverse all nums:      7 6 5 4 3 2 1
+  // 2. reverse nums before k: 5 6 7 4 3 2 1
+  // 3. reverse nums after k:  5 6 7 1 2 3 4
+  public void rotate2(int[] nums, int k) {
+    k % nums.length;
+    reverse(nums, 0, nums.length - 1);
+    reverse(nums, 0, k - 1);
+    reverse(nums, k, nums.length - 1)
+  }
+  public void reverse(int[] nums, int start, int end) {
+    while(start < end) {
+      int temp = nums[start];
+      nums[start] = nums[end];
+      nums[end] = temp;
+      start++;
+      end--;
+    }
+  }
+}
+```
+
+## 41. First Missing Positive
+
+Given an unsorted integer array, find the smallest missing positive integer.
+
+**Example 1:**
+
+<Codeblock>
+<p>
+Input: [1,2,0]<br>
+Output: 3<br>
+</p>
+</Codeblock>
+
+**Example 2:**
+
+<Codeblock>
+<p>
+Input: [3,4,-1,1]<br>
+Output: 2<br>
+</p>
+</Codeblock>
+
+**Example 3:**
+
+<Codeblock>
+<p>
+Input: [7,8,9,11,12]<br>
+Output: 1<br>
+</p>
+</Codeblock>
+
+**Note:**
+
+Your algorithm should run in O(n) time and uses constant extra space.
+
+```java
+class Solution {
+  // 注意第三个例子里1是最小的正整数
+  // 如果[1, 2, 3, 4]这里最小的应该是5
+  public int firstMissingPositive(int[] nums) {
+      
+  }
+}
+```
+
 ## 268. Missing Number
 
 Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
