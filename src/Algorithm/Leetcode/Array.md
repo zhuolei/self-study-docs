@@ -139,9 +139,9 @@ It doesn't matter what you leave beyond the returned length.<br>
 和26题做法相同<br>
 Two pointer <br>
 `start: [1, 1, 1, 2, 2, 3]` <br>
-`end: [1, 1, 2, 2, 3]` <br>
-<span style="padding-left:200px">`c`</span><br>
-<span style="padding-left:220px">`i`</span><br>
+`end: [1, 1, 2, 2, 3, 3]` <br>
+<span style="padding-left:170px">`c`</span><br>
+<span style="padding-left:200px">`i`</span><br>
 Time: 0(n) <br>
 Space: 0(1)
 :::
@@ -163,6 +163,80 @@ public class Solution {
   }
 }
 ```
+
+## 277. Find the Celebrity
+
+Suppose you are at a party with n people (labeled from `0` to `n - 1`) and among them, there may exist one celebrity. The definition of a celebrity is that all the other `n - 1` people know him/her but he/she does not know any of them.
+
+Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: "Hi, A. Do you know B?" to get information of whether A knows B. You need to find out the celebrity (or verify there is not one) by asking as few questions as possible (in the asymptotic sense).
+
+You are given a helper function `bool knows(a, b)` which tells you whether A knows B. Implement a function int findCelebrity(n). There will be exactly one celebrity if he/she is in the party. Return the celebrity's label if there is a celebrity in the party. If there is no celebrity, return `-1`.
+
+**Example 1:**
+
+<Codeblock>
+![img](~@algorithm/img/277_example_1_bold.png)
+<p>
+Input: graph = [ <br>
+  [1,1,0],<br>
+  [0,1,0],<br>
+  [1,1,1]<br>
+]<br>
+Output: 1 <br>
+Explanation: There are three persons labeled with 0, 1 and 2. graph[i][j] = 1 means person i knows person j, otherwise graph[i][j] = 0 means person i does not know person j. The celebrity is the person labeled as 1 because both 0 and 2 know him but 1 does not know anybody.
+</p>
+</Codeblock>
+
+**Example 2:**
+
+<Codeblock>
+![img](~@algorithm/img/277_example_2.png)
+<p>
+Input: graph = [ <br>
+  [1,0,1], <br>
+  [1,1,0], <br>
+  [0,1,1] <br>
+] <br>
+Output: -1 <br>
+Explanation: There is no celebrity. <br>
+</p>
+</Codeblock>
+
+**Note:**
+
+- The directed graph is represented as an adjacency matrix, which is an n x n matrix where `a[i][j] = 1` means person i knows person j while `a[i][j] = 0` means the contrary.
+- Remember that you won't have direct access to the adjacency matrix.
+
+```java
+/* The knows API is defined in the parent class Relation. boolean knows(int a, int b); */
+public class Solution extends Relation {
+   public int findCelebrity(int n) {
+      if (n < 2) return -1;
+
+      int candidate = 0;
+      for (int i = 1; i < n; i++) {
+        //基于名人不认识所有人而所有人认识名人
+        //所以只要candiate认识i就说明candiate不可能是名人，所以把i赋值给candiate,这里是因为有且仅有一个名人
+        if (knows(candidate, i)) {
+          candidate = i;
+        }
+      }
+      for (int i = 0; i < n; i++) {
+        // candiate != i 把名人本身去掉
+        // knows(candidate, i) 如果candiate 认识某人说明不是名人
+        // !knows(i, candidate) 如果某人不认识candiate也说明他不是名人
+        if (candidate != i && (knows(candidate, i) || !knows(i, candidate))) {
+          return -1;
+        }
+      }
+      return candiate;
+   }
+}
+```
+
+## 189. Rotate Array
+
+Given an array, rotate the array to the right by k steps, where k is non-negative.
 
 ## 268. Missing Number
 
