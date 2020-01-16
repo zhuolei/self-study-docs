@@ -350,8 +350,34 @@ Your algorithm should run in O(n) time and uses constant extra space.
 class Solution {
   // 注意第三个例子里1是最小的正整数
   // 如果[1, 2, 3, 4]这里最小的应该是5
+  // 用到bucket sort理念
+  // 正常来说一个不missing的数组每个item = index + 1;
+  // [0, 1, 2, 3]
+  // [1, 2, 3, 4]
   public int firstMissingPositive(int[] nums) {
-      
+    if (nums == null || nums.length == 0) return 1;
+    for (int i = 0; i < nums.length; i++) {
+      // nums[nums[i] - 1] != nums[i] 是应用桶排序的理念把nums[i]的值放到相对应的桶里去就是item - 1 = index;
+      // 举个例子为什么用while
+      //         [3, 1, 4, -1]
+      // 换第一次 [4, 1, 3, -1]
+      //         [1, -1, 3, 4]
+      // 如果是if的话就只换一次就不换了，所以要用while换到不满足while入口条件为止
+      // 换到最后是[1, -1, 3, 4]
+      while (nums[i] > 0 && nums[i] <= nums.length && nums[nums[i] - 1] != nums[i]) {
+        int temp = nums[nums[i] - 1];
+        nums[nums[i] - 1] = nums[i];
+        nums[i] = temp;
+      }
+    }
+    for (int i = 0; i < nums.length; i++) {
+      // 返回第一个missing number
+      if (nums[i] != i + 1) {
+        return i + 1;
+      }
+    }
+    // 这里考虑到的情况是[1, 2, 3, 4]所以返回5
+    return nums.length + 1;
   }
 }
 ```
