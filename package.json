@@ -11,11 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "vuepress": "^0.12.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.1"
+    "sass-loader": "^8.0.1",
+    "vuepress": "^0.12.0"
   }
 }

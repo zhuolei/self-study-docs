@@ -437,3 +437,10 @@ public int missingNumber(int[] nums) {
 **Follow up**
 
 What if input is [1, 2, 3, 4, 5], output is 6?
+
+
+if (!Array.prototype.duplicate) {
+  Array.prototype.duplicate = function (callback) {
+
+  }
+}
