@@ -175,7 +175,7 @@ You are given a helper function `bool knows(a, b)` which tells you whether A kno
 **Example 1:**
 
 <Codeblock>
-![img](~@algorithm/img/277_example_1_bold.png)
+![img](~@pic/img/277_example_1_bold.png)
 <p>
 Input: graph = [ <br>
   [1,1,0],<br>
@@ -190,7 +190,7 @@ Explanation: There are three persons labeled with 0, 1 and 2. graph[i][j] = 1 me
 **Example 2:**
 
 <Codeblock>
-![img](~@algorithm/img/277_example_2.png)
+![img](~@pic/img/277_example_2.png)
 <p>
 Input: graph = [ <br>
   [1,0,1], <br>

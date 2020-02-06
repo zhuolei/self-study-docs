@@ -217,7 +217,7 @@ var config = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@algorithm': '../../assets',
+        '@pic': '../../assets',
         '@home': './assets'
       }
     }
