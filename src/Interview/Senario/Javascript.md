@@ -21,9 +21,9 @@ function round5(x) {
 ```js
 function roundTimeQuarterHour(time) {
     var timeToReturn = new Date(time);
-    // 当setSeconds(60)时会进位,所以下面两行没必要
-    // timeToReturn.setMilliseconds(Math.ceil(timeToReturn.getMilliseconds() / 1000) * 1000);
-    // timeToReturn.setSeconds(Math.ceil(timeToReturn.getSeconds() / 60) * 60);
+    // 当setSeconds(60)时会进位,所以下面两行没必要(说错了有必要)
+    timeToReturn.setMilliseconds(Math.ceil(timeToReturn.getMilliseconds() / 1000) * 1000);
+    timeToReturn.setSeconds(Math.ceil(timeToReturn.getSeconds() / 60) * 60);
     timeToReturn.setMinutes(Math.ceil(timeToReturn.getMinutes() / 5) * 5);
     return timeToReturn;
 }
@@ -32,3 +32,15 @@ function roundTimeQuarterHour(time) {
 :::tip
 more detail <a href="https://stackoverflow.com/questions/4968250/how-to-round-time-to-the-nearest-quarter-hour-in-javascript/4968292" target="_blank">here</a>
 :::
+
+## Format Date
+
+`format-date.js`
+```js
+export default function(timestamp, userOption = {}, locale = 'en-US') {
+  const date = new Date(timestamp);
+  const options = { localeMatcher: 'best fit', year: 'numeric', month: 'long', day: 'numeric', ...userOptions }
+
+  return date.toLocaleDateString(locale, options);
+}
+```
