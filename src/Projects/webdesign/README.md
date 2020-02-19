@@ -1,1 +1,1 @@
-# Web component design
+# Web App design
