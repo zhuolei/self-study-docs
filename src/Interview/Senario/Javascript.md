@@ -44,3 +44,32 @@ export default function(timestamp, userOption = {}, locale = 'en-US') {
   return date.toLocaleDateString(locale, options);
 }
 ```
+
+## How to Flatten Array
+
+```js
+// for of
+function flattern(arr, result = []) {
+  for (let itm of arr) {
+    if (Array.isArray(itm)) {
+      flattern(itm, result);
+    } else {
+      result.push(itm);
+    }
+  }
+
+  return result;
+}
+
+// reduce
+
+function flatten(arr) {
+  return arr.reduce((flat, toFlatten) => {
+    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  }, []);
+}
+```
+
+:::tip
+<a href="https://www.jianshu.com/p/b1fb3434e1f5">More</a>
+:::
