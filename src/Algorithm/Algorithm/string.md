@@ -26,3 +26,29 @@ const count = (str, subStr, allowOverlap) => {
 }
 ```
 
+## Longest Common Ending
+
+Write a function that returns the longest common ending between two strings
+
+**Examples**
+
+`LongestCommonEnding("Multiplication", "ration") => "ation"`
+
+```js
+const lce = (s1, s2) => {
+  const a1 = [ ...s1 ]; //'str' => ['s', 't', 'r']
+  const a2 = [ ...s2 ];
+
+  let res = [];
+  while(a1.length && a2.length) {
+    if (a1[a1.length - 1] !== a2[a2.length - 1]) {
+      return res;
+    } else {
+      a2.pop();
+      res.unshift(a1.pop());
+    }
+  }
+
+  return res.join('');
+}
+```

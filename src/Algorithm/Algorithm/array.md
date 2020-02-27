@@ -59,3 +59,38 @@ const mergeArrays = (arr1, arr2) => {
   return r;
 }
 ```
+
+## Concatenate to Form Target Array (flatten array)
+
+Create a function that returns true if smaller arrays can concatenate to form the target array and false otherwise
+
+**Examples:**
+
+<Codeblock>
+<p>
+canConcatenate([[1,2,3], [4], [5]], [1,2,3,4,5]) -> true<br>
+canConcatenate([[2,1,3], [4,5]], [5,4,3,2,1]) -> true<br>
+canConcatenate([[1,2,3], [4,5,5]], [5,4,3,2,1]) -> false<br>
+canConcatenate([[1,2,3], [4]], [5,4,3,2,1]) -> false<br>
+</p>
+</Codeblock>
+
+**Notes**
+- Arrays do not have to be sorted(see example2)
+- Arrays should concatenate to create the final array exactly(see examples #3 and #4)
+
+See [how to flatten array](../../Interview/Senario/Javascript.md#how-to-flatten-array)
+
+```js
+const canConcatenate = (arr1, arr2) => {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return false;
+  }
+  const arr3 = arr1.reduce((acc, itm) => {
+    acc.push(...itm);
+    return acc;
+  }, []);
+
+  return arr3.sort().join('') === arr2.sort().join('');
+}
+```
