@@ -59,3 +59,19 @@ const mergeArrays = (arr1, arr2) => {
   return r;
 }
 ```
+
+## Find Two Numbers that Add up to "n"
+
+Given an array and a number `n`, find two numbers from the array that sum to `n`. 
+
+**Input**
+An array and a number n
+
+**Output**
+An array with two integers a and b ([a,b]) that add up to n where:
+
+index of a in the input array < the index of b in the input array
+
+```js
+const
+```
