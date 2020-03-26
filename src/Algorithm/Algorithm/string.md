@@ -42,7 +42,7 @@ const lce = (s1, s2) => {
   let res = [];
   while(a1.length && a2.length) {
     if (a1[a1.length - 1] !== a2[a2.length - 1]) {
-      return res;
+      return res.join('');
     } else {
       a2.pop();
       res.unshift(a1.pop());
