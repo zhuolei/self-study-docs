@@ -1,6 +1,7 @@
 # String
 
-## 387. First Unique Character in a String
+## Basic
+### 387. First Unique Character in a String
 
 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
 
@@ -34,7 +35,7 @@ class Solution {
 }
 ```
 
-## 557. Reverse Words in a String III
+### 557. Reverse Words in a String III
 
 Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order
 
@@ -46,7 +47,7 @@ Given a string, you need to reverse the order of characters in each word within 
 </p>
 </Codeblock>
 
-### JS
+**JS**
 ```js
 var reverseWords = function(s) {
   let arr = s.split(' ');
@@ -85,7 +86,7 @@ var reverseWords = function(s) {
 }
 ```
 
-## 696. Count Binary Substrings
+### 696. Count Binary Substrings
 
 **Example 1:**
 
@@ -96,7 +97,7 @@ var reverseWords = function(s) {
 00110011
 00110011
 
-### JS
+**JS**
 ```js
 var countBinarySubstrings = function(s) {
   let r = [];
@@ -122,3 +123,39 @@ var countBinarySubstrings = function(s) {
 }
 
 ```
+
+## Parentheses
+
+### 301. Remove Invalid Parentheses
+<a href="https://leetcode.com/problems/remove-invalid-parentheses/" target="_blank">Link</a>
+
+Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+
+**Note:** The input string may contain letters other than the parentheses `(` and `)`.
+
+**Example 1:**
+
+<Codeblock>
+<p>
+Input: "()())()"<br>
+Output: ["()()()", "(())()"]
+</p>
+</Codeblock>
+
+**Example 2:**
+
+<Codeblock>
+<p>
+Input: "(a)())()"<br>
+Output: ["(a)()()", "(a())()"]
+</p>
+</Codeblock>
+
+**Example 3:**
+
+<Codeblock>
+<p>
+Input: ")("<br>
+Output: [""]
+</p>
+</Codeblock>
