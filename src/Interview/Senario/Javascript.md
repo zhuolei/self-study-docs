@@ -64,8 +64,8 @@ function flattern(arr, result = []) {
 // reduce
 
 function flatten(arr) {
-  return arr.reduce((flat, toFlatten) => {
-    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  return arr.reduce((acc, val) => {
+    return acc.concat(Array.isArray(val) ? flatten(val) : val);
   }, []);
 }
 ```
@@ -73,3 +73,43 @@ function flatten(arr) {
 :::tip
 <a href="https://www.jianshu.com/p/b1fb3434e1f5">More</a>
 :::
+
+## Debounce && Throttle
+
+- throttle：将一个函数的调用频率限制在一定阈值内，例如 1s 内一个函数不能被调用两次。debounce：当调用函数n秒后，才会执行该动作，若在这n秒内又调用该函数则将取消前一次并重新计算执行时间，举个简单的例子，我们要根据用户输入做suggest，每当用户按下键盘的时候都可以取消前一次，并且只关心最后一次输入的时间就行了。
+ 
+- This functionality is frequently controlled by a function called a debounce (it could also be a throttle function which has a similar outcome). The debounce function delays the processing of the keyup event until the user has stopped typing for a predetermined amount of time. This prevents your UI code from needing to process every event and also drastically reduces the number of API calls sent to your server. Processing every character as it’s entered could harm performance and add unnecessary load to your server.
+
+```js
+function debounce3(fn, delay) {
+  var timer
+  // 返回一个函数,这个函数会在一个时间区间结束后的delay毫秒时执行fn函数
+  return function () {
+    // 保存函数调用时的上下文和参数，传递给fn
+    var context = this;
+    var args = argments;
+    // 每次这个返回的函数被调用，就清除定时器，以保证不执行fn
+    clearTimeout(timer);
+    // 当返回的函数被最后一次调用后（也就是用户停止了某个连续的操作），
+    // 再过delay毫秒就执行fn
+    timer = setTimeout(function() {
+      fn.apply(context, args)
+    }, delay)
+  }
+}
+
+window.addEventListener('resize', debounce)
+
+// another example
+export default function debounce(fn, delay) {
+  let id = null;
+  return function dbc(...args) {
+    clearTimeout(id);
+    const that = this;
+    id = setTimeout(() => {
+      fn.apply(that, args);
+    }, delay);
+  }
+}
+```
+
