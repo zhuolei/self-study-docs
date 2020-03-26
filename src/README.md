@@ -4,6 +4,7 @@
 <a href="https://leetcode.com/problemset/all/" target="_blank">Leetcode&nbsp;&nbsp;</a>
 <a href="https://codepen.io/" target="_blank">CodePen&nbsp;&nbsp;</a>
 <a href="https://www.lintcode.com/problem/" target="_blank">Lintcode&nbsp;&nbsp;</a>
+<a href="https://playcode.io/" target="_blank">JS code editor&nbsp;&nbsp;</a>
 
 ### Learning Website
 
