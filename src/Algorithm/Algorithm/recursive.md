@@ -72,6 +72,20 @@ const slowFib = (n) => {
 
 const fib = memorize(slowFib);
 ```
+
+Another way to write fib
+```js
+const fib = (n) => {
+  let a = 0, b = 1;
+  let res = [0, 1];
+  while (res.length < n) {
+    [a, b] = [b, a + b]; // using array deconstruction;
+    res.push(b);
+  }
+  return res;
+}
+```
+
 :::tip
 <Link hrefUrl="https://javascript.info/object" text="JS object computed properties"></Link>
 :::

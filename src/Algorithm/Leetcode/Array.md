@@ -1,6 +1,9 @@
 # Array
 
-## 27. Remove Element (Two pointer)
+## Basic
+
+### 27. Remove Element (Two pointer)
+<a href="https://leetcode.com/problems/remove-element/" target="_blank">Link</a>
 
 Given an array nums and a value val, remove all instances of that value in-place and return the new length.
 
@@ -56,7 +59,28 @@ public class Solution {
 }
 ```
 
-## 26. Remove Duplicates from Sorted Array (Two pointer)
+```js
+var removeElement = function(nums, val) {
+  if (!Array.isArray(nums)) return 0;
+    let len = 0;
+    // nums.forEach((itm, index) => {
+    //   if (itm !== val) {
+    //     nums[len++] = nums[index];
+    //   }
+    // })
+
+    // faster version
+    for(let i in nums) {
+        if (nums[i] !== val) {
+            nums[len++] = nums[i];
+        }
+    }
+  return len;
+};
+```
+### 26. Remove Duplicates from Sorted Array (Two pointer)
+<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/" target="_blank">Link</a>
+
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
 Do not allocate extra space for another array, you must do this by **modifying the input array in-place** with O(1) extra memory.
@@ -92,6 +116,8 @@ Time: 0(n) <br>
 Space: 0(1)
 :::
 
+**Java**
+
 ```java
 public class Solution {
   public int removeDuplicates(int[] nums) {
@@ -99,7 +125,8 @@ public class Solution {
     // 因为是去重，第一个肯定保留，所以count初始值为1, i也从1开始
     int count = 1;
     for (int i = 1; i < nums.length; i++) {
-      // 这里i - 1也可以用count - 1， 因为count - 1代表的是已经完工的array,有点selection sort的意味
+      // 这里i - 1也可以用count - 1， 
+      // 因为count - 1代表的是已经完工的array,有点selection sort的意味
       if (nums[i - 1] != nums[i]) {
         nums[count++] = nums[i];
       }
@@ -109,7 +136,21 @@ public class Solution {
 }
 ```
 
-## 80. Remove Duplicates from Sorted Array II
+**JS**
+```js
+const removeDuplicates = (nums) => {
+	if (!Array.isArray(nums)) return 0;
+	let len = 1;
+	for (let i = 1; i < nums.length; i++) {
+		if (nums[i - 1] !== nums[i]) {
+			nums[len++] = nums[i];
+		}
+	}
+	return len;
+}
+```
+
+### 80. Remove Duplicates from Sorted Array II
 
 Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 
@@ -164,7 +205,7 @@ public class Solution {
 }
 ```
 
-## 277. Find the Celebrity
+### 277. Find the Celebrity
 
 Suppose you are at a party with n people (labeled from `0` to `n - 1`) and among them, there may exist one celebrity. The definition of a celebrity is that all the other `n - 1` people know him/her but he/she does not know any of them.
 
@@ -234,7 +275,7 @@ public class Solution extends Relation {
 }
 ```
 
-## 189. Rotate Array
+### 189. Rotate Array
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
@@ -311,7 +352,7 @@ class Solution {
 }
 ```
 
-## 41. First Missing Positive
+### 41. First Missing Positive
 
 Given an unsorted integer array, find the smallest missing positive integer.
 
@@ -382,7 +423,7 @@ class Solution {
 }
 ```
 
-## 268. Missing Number
+### 268. Missing Number
 
 Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
 
