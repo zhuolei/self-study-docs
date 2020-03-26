@@ -155,13 +155,13 @@ function sortDir(a, b) {
     let al = a.parent.toString().split("/").length;
     let bl = b.parent.toString().split("/").length;
     if (al > bl) {
-        return -1;
+        return 1;
     }
     if (al === bl) {
         return 0;
     }
     if (al < bl) {
-        return 1;
+        return -1;
     }
 }
 
