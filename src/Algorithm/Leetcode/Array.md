@@ -2,6 +2,167 @@
 
 ## Basic
 
+### 1. Two Sum
+<a href="https://leetcode.com/problems/two-sum/" target="_blank">Link</a>
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+**Example 1:**
+
+<Codeblock>
+<p>
+Given nums = [2, 7, 11, 15], target = 9,<br>
+Because nums[0] + nums[1] = 2 + 7 = 9,<br>
+return [0, 1].<br>
+</p>
+</Codeblock>
+
+```java
+public class Solution {
+  public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    for(int i = 0; i < nums.length; i++ ){
+      int x = nums[i];
+      if(map.containsKey(target - x)){
+          return new int[] {map.get(target-x) , i };
+      }
+      map.put(x, i);
+    }
+    throw new IllegalArgumentException("No two sum solution");
+  }
+}
+```
+
+**JS**
+For loop
+```js
+const twoSum = (nums, target) => {
+  const map = {};
+  for (let i = 0; i < nums.length; i++) {
+    let temp = nums[i];
+    if (map.hasOwnProperty(target - temp)) {
+      return [map[target - temp], i];
+    }
+    map[temp] = i;
+  }
+  return [];
+}
+```
+
+forEach
+
+```js
+const twoSum = (nums, target) => {
+  const map = {};
+  const res = [];
+  // for (let i in nums) {
+  //   let temp = nums[i];
+  //   if (map.hasOwnProperty(target - temp)) {
+  //     return [map[target - temp], i];
+  //   }
+  //   map[temp] = i;
+  // }
+  nums.forEach((itm, i) => {
+    // 这里注意i = 0的情况所以用hasOwnProperty
+    // forEach 不能 return 而且forEach比 for loop 慢
+    if (map.hasOwnProperty(target - itm)) {
+      res = [map[target - itm], i] 
+    }
+    map[itm] = i;
+  })
+  return [];
+}
+```
+
+Use ES6 `map`
+```js
+const twoSum = (nums, target) => {
+  let map = new Map();
+  // for..in 里的i是string 所以最好不用for..in, 要不然i+ 1的时候会出问题
+  for (let i = 0; i < nums.length; i++) {
+    let temp = nums[i];
+    if (map.get(target - temp)) {
+      return [map.get(target - temp) - 1, i];
+    }
+    map.set(temp, i + 1);
+  }
+  return [];
+}
+```
+
+:::warning
+Do not use for in loop for Array or Map, see [more about Iterator](../../front-end/ES6/Iterator.md#for-in) and [more about Map](../../front-end/ES6/Map.md#iterating-map-with-for..of)
+:::
+#### Follow up
+
+- What if return the array of the two nums
+
+<Codeblock>
+<p>
+Given nums = [12, 5, 7, 9, 34, 8], target = 13,<br>
+return [5, 8].<br>
+</p>
+</Codeblock>
+
+**JS**
+```js
+const twoSum = (nums, target) => {
+  const map = {};
+  const res = [];
+  // for..in 里的i是string 所以建议不用for..in gothrough array
+  for (let i in nums) {
+    let temp = nums[i];
+    if (map[target - temp]) {
+      return [target - temp, temp];
+    }
+    map[temp] = i + 1;
+  }
+  return [];
+}
+```
+
+- What if it has mutiple solution
+
+**JS**
+```js
+const twoSum = (nums, target) => {
+  const map = {};
+  const res = [];
+  for (let i = 0; i < nums.length; i++) {
+    let temp = nums[i];
+    if (map.hasOwnProperty(target - temp)) {
+      res.push([target - temp, temp]);
+    }
+    map[temp] = i;
+  }
+  return res;
+}
+```
+
+### 167. Two Sum II - Input array is sorted
+<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank">Link</a>
+
+Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
+
+**Note:**
+
+- Your returned answers (both index1 and index2) are not zero-based.
+- You may assume that each input would have exactly one solution and you may not use the same element twice.
+
+
+**Example:**
+
+<Codeblock>
+<p>
+Input: numbers = [2,7,11,15], target = 9<br>
+Output: [1,2]<br>
+Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.</p>
+</p>
+</Codeblock>
+
 ### 27. Remove Element (Two pointer)
 <a href="https://leetcode.com/problems/remove-element/" target="_blank">Link</a>
 

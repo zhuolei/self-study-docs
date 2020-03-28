@@ -52,3 +52,5 @@ There are ways around these things. Using an empty bit of Javascript code in the
 :::tip
 <a href="https://stackoverflow.com/questions/7755088/what-does-href-expression-a-href-javascript-a-do">more</a>
 :::
+
+## Write a function that takes form id as input, and returns the DOM form values as an object

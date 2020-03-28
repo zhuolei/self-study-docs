@@ -47,8 +47,8 @@ export default function(timestamp, userOption = {}, locale = 'en-US') {
 
 ## How to Flatten Array
 
+### For..of
 ```js
-// for of
 function flattern(arr, result = []) {
   for (let itm of arr) {
     if (Array.isArray(itm)) {
@@ -60,14 +60,34 @@ function flattern(arr, result = []) {
 
   return result;
 }
+```
 
-// reduce
-
+### reduce
+```js
 function flatten(arr) {
   return arr.reduce((acc, val) => {
     return acc.concat(Array.isArray(val) ? flatten(val) : val);
   }, []);
 }
+
+```
+
+### forEach
+```js
+function flatten(arr) {
+  const result = []
+
+  arr.forEach((i) => {
+    if (Array.isArray(i)) {
+      result.push(...flatten(i))
+    } else {
+      result.push(i)
+    }
+  })
+  
+  return result
+}
+
 ```
 
 :::tip
