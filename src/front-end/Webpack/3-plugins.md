@@ -57,3 +57,24 @@ module.exports = {
   }), new CleanWebpackPlugin(['dist'])]// remove dist folder for each bundle
 };
 ```
+
+## Tapable Plugin System
+
+## Create a Plugin 
+
+MyFirstWebpackPlugin.js
+
+```js
+class MyFirstWebpackPlugin {
+  apply(compiler) {
+    compiler.hooks.done.tapAsync("MyFirstWebpackPlugin", (stats, cb) => {
+      console.log(stats);
+      debugger
+    })
+  }
+}
+
+module.exports = MyFirstWebpackPlugin;
+```
+
+And apply plugin in webpack.config.js

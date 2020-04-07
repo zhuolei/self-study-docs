@@ -133,3 +133,45 @@ export default function debounce(fn, delay) {
 }
 ```
 
+## Format date
+
+`format-date.js`
+```js
+export default function(timestamp, userOptions = {}, locale = 'en-US') {
+  const date = new Date(timestamp);
+  const options = { localeMatcher: 'best fit', year: 'numeric', month: 'long', day: 'numeric', ...userOptions };
+
+  return date.toLocalDateString(locale, options);
+}
+```
+`import formatDate from './format-date.js'`
+
+## import different modules
+
+`importer.js`
+```js
+export default (...modules) => Promise.all(
+  // flatten arguments to enable both
+  // imports([m1, m2]) or imports(m1, m2)
+  modules.concat.apply([], modules)
+  // asynchronously await each module returning its default
+  .map(async m => (await m).default)
+);
+```
+
+`Vue` `main.js`
+```js
+const isClient = window.location.pathname === '/js-client-test';
+  const imports = isClient
+    ? [
+      import('./router-client.js'),
+      import('./PublicApp.vue'),
+    ]
+    : [
+      import('./router-admin.js'),
+      import('./App.vue'),
+    ];
+
+  const [router, App] = await importer(imports);
+```
+
