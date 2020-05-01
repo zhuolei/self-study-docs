@@ -1,5 +1,9 @@
 # Vue 3
 
+Vue 3 Cheat Sheet
+
+<iframe src="https://www.vuemastery.com/pdf/Vue-3-Cheat-Sheet.pdf" width="100%" height="600"></iframe>
+
 ## Limitation of Vue 2
 
 - Readability as components grow
@@ -121,5 +125,6 @@ With the composition API we can declare reactive objects that aren't associated 
 :::
 
 ### Method
+
 
 
