@@ -175,3 +175,10 @@ const isClient = window.location.pathname === '/js-client-test';
   const [router, App] = await importer(imports);
 ```
 
+## 如何执行多个promise
+
+await Promise.all()
+
+### 如何按顺序执行多个promise
+
+use for loop or for each
