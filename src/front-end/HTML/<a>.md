@@ -13,3 +13,5 @@
 ```html
 <a :target="`_${id}`" :href="url"></a>
 ```
+
+`<a>`回去找相同target的tab，如果没有就新打开一个。
