@@ -182,3 +182,35 @@ await Promise.all()
 ### 如何按顺序执行多个promise
 
 use for loop or for each
+
+### How to Capitalize the first letter of a string
+
+```js
+const cp = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+```
+
+# How to find value based on object key
+
+```js
+locales = ['pt', 'es', 'de', 'fr', 'ja', 'en'];
+const urlList = locales.map(x => ({[x]: 'http://google.com'}))
+
+//  [{…}, {…}, {…}, {…}, {…}, {…}]
+// 0: {pt: "http://google.com"}
+// 1: {es: "http://google.com"}
+// 2: {de: "http://google.com"}
+// 3: {fr: "http://google.com"}
+// 4: {ja: "http://google.com"}
+// 5: {en: "http://google.com"}
+
+const locale = 'en'
+const obj = urlList.find(x => locale in x);
+```
+
+# How to check is js object empty?
+
+```js
+export const isObjectEmpty = obj => !obj ? true : Object.keys(obj).length === 0 && obj.constructor === object;
+```
