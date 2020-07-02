@@ -1,5 +1,16 @@
 # Stack
 
+## 栈的应用场景
+
+所有要后进先出的场景
+
+- 十进制转二进制
+![img](~@pic/img/stack1.png)
+- 判断字符串的括号是否有效
+![img](~@pic/img/stack2.png)
+- 函数调用堆栈
+![img](~@pic/img/stack3.png)
+
 ## C++
 
 ```cpp

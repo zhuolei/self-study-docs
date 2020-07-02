@@ -39,6 +39,7 @@ render () {
 ```js
 import { h } from 'vue';
 
+// <div id="hello"><span>world</span></div>
 const App = {
   render() {
     return h('div', {
@@ -47,5 +48,34 @@ const App = {
   }
 }
 
-// <div id="hello"><span>world</span></div>
+// v-if
+const App = {
+  render() {
+    return this.ok 
+    ? h('div', { id: 'hello' }, [ h('span', 'world') ])
+    : this.otherCondition // v-else
+      ? h('p', 'other branch')
+      : h('span')
+  }
+}
+
+// v-for 
+const App = {
+  render() {
+    return this.list.map(item => {
+      return h('div', {key: item.id}, item.text)
+    })
+  }
+}
+
+// slot
+const App = {
+  render() {
+    const slot = this.$slots.default 
+      ? this.$slots.default();
+      : []
+
+    return h('div', slot)
+  }
+}
 ```

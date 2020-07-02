@@ -1,5 +1,20 @@
 # Python
 
+## Pycharm 快捷键
+
+### keybinding eclipse
+alt + 右箭头 前进到源码所在位置 Navigate ➡
+alt + 左箭头 看源码时回到调用源码的位置
+alt + 上下箭头 两行代码调换位置
+ctrl + f 搜索
+ctrl + h 全局搜索
+shift + 回退键 多行回退
+home end 行首和行尾
+shift + end 光标在行首， 选择这一行
+ctrl + o
+ctrl + shift + r Navigate file...
+
+
 ## Change file extension
 
 ```python
