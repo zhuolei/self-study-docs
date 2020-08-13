@@ -8,7 +8,9 @@
 
 ### Learning Website
 
-<a href="https://www.imooc.com/" target="_blank">慕课网&nbsp;&nbsp;</a>
+<a href="https://www.imooc.com/" target="_blank">慕课网&nbsp;&nbsp;&nbsp;</a>
+<a href="https://es6.ruanyifeng.com/" target="_blank">阮一峰 ES6&nbsp;&nbsp;</a>
+</br>
 <a href="https://www.educative.io/learn" target="_blank">educative.io&nbsp;&nbsp;</a>
 <a href="https://frontendmasters.com/dashboard/" target="_blank">Frontendmaster&nbsp;&nbsp;</a>
 <a href="https://www.udemy.com/" target="_blank">Udemy&nbsp;&nbsp;</a>
