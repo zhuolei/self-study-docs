@@ -221,6 +221,7 @@ var config = {
         '@home': './assets'
       }
     }
-  }
+  },
+  plugins: ['vuepress-plugin-export'],
 }
 module.exports = config;

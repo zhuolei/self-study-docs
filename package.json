@@ -8,16 +8,19 @@
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "rebuild:win10": "rimraf ./node_modules && npm install",
-    "rebuild:mac": "rm -rf ./node_modules && npm install"
+    "rebuild:mac": "rm -rf ./node_modules && npm install",
+    "pdf": "vuepress export ./docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "vuepress-plugin-export": "^0.2.0"
+  },
   "devDependencies": {
     "node-sass": "^4.14.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
-    "vuepress": "^1.5.3"
+    "vuepress": "^1.5.4"
   }
 }
