@@ -9,7 +9,7 @@
     "build": "vuepress build src",
     "rebuild:win10": "rimraf ./node_modules && npm install",
     "rebuild:mac": "rm -rf ./node_modules && npm install",
-    "pdf": "vuepress export ./docs"
+    "pdf": "vuepress export src"
   },
   "keywords": [],
   "author": "",
