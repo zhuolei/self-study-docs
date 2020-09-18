@@ -26,3 +26,7 @@ eg: 5维向量，可想象成高维空间的一个点，也可以看成从（0�
 ```python
 
 ```
+
+:::tip
+more about [Python generator Expression](../../back-end/Python/generator.md)
+:::
