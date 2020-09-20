@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Web Components | Self Study</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.d130a179.css" as="style"><link rel="preload" href="/assets/js/app.ee7b91ca.js" as="script"><link rel="preload" href="/assets/js/2.854868f9.js" as="script"><link rel="preload" href="/assets/js/9.687fcfc4.js" as="script"><link rel="prefetch" href="/assets/js/10.710e638e.js"><link rel="prefetch" href="/assets/js/100.e57a7cb1.js"><link rel="prefetch" href="/assets/js/101.1ba05fbe.js"><link rel="prefetch" href="/assets/js/102.7d66de9f.js"><link rel="prefetch" href="/assets/js/103.da7e04d9.js"><link rel="prefetch" href="/assets/js/104.1ec9f956.js"><link rel="prefetch" href="/assets/js/105.cad4434e.js"><link rel="prefetch" href="/assets/js/106.a62ec667.js"><link rel="prefetch" href="/assets/js/107.ea382a0b.js"><link rel="prefetch" href="/assets/js/108.110d79ec.js"><link rel="prefetch" href="/assets/js/109.0c59765e.js"><link rel="prefetch" href="/assets/js/11.8b2e71f0.js"><link rel="prefetch" href="/assets/js/110.32992d37.js"><link rel="prefetch" href="/assets/js/111.c19466fa.js"><link rel="prefetch" href="/assets/js/112.b75fce57.js"><link rel="prefetch" href="/assets/js/113.43408aa0.js"><link rel="prefetch" href="/assets/js/114.a90aa80c.js"><link rel="prefetch" href="/assets/js/115.758dba0e.js"><link rel="prefetch" href="/assets/js/116.5ba6fbf1.js"><link rel="prefetch" href="/assets/js/117.46b7faf9.js"><link rel="prefetch" href="/assets/js/118.d590146f.js"><link rel="prefetch" href="/assets/js/119.698a7e10.js"><link rel="prefetch" href="/assets/js/12.82306cd1.js"><link rel="prefetch" href="/assets/js/120.44c4167b.js"><link rel="prefetch" href="/assets/js/121.06af09b2.js"><link rel="prefetch" href="/assets/js/122.55e212e5.js"><link rel="prefetch" href="/assets/js/123.8ee2b8e0.js"><link rel="prefetch" href="/assets/js/124.f9273447.js"><link rel="prefetch" href="/assets/js/125.bd185bfb.js"><link rel="prefetch" href="/assets/js/126.4b835cb3.js"><link rel="prefetch" href="/assets/js/127.341366e2.js"><link rel="prefetch" href="/assets/js/128.22bbb0ec.js"><link rel="prefetch" href="/assets/js/129.ef876ca3.js"><link rel="prefetch" href="/assets/js/13.b352d9d8.js"><link rel="prefetch" href="/assets/js/130.87392767.js"><link rel="prefetch" href="/assets/js/131.9f546830.js"><link rel="prefetch" href="/assets/js/132.ea873112.js"><link rel="prefetch" href="/assets/js/133.04f578d5.js"><link rel="prefetch" href="/assets/js/134.d64642cf.js"><link rel="prefetch" href="/assets/js/14.2489828d.js"><link rel="prefetch" href="/assets/js/15.b2e1df7c.js"><link rel="prefetch" href="/assets/js/16.ff363360.js"><link rel="prefetch" href="/assets/js/17.a5581f62.js"><link rel="prefetch" href="/assets/js/18.a2d2b7fd.js"><link rel="prefetch" href="/assets/js/19.59293f5e.js"><link rel="prefetch" href="/assets/js/20.32777e6b.js"><link rel="prefetch" href="/assets/js/21.44e5812f.js"><link rel="prefetch" href="/assets/js/22.a4a77d2a.js"><link rel="prefetch" href="/assets/js/23.4c071c86.js"><link rel="prefetch" href="/assets/js/24.12309585.js"><link rel="prefetch" href="/assets/js/25.63bacda3.js"><link rel="prefetch" href="/assets/js/26.16e8c890.js"><link rel="prefetch" href="/assets/js/27.827ddf2d.js"><link rel="prefetch" href="/assets/js/28.0a1c9fe1.js"><link rel="prefetch" href="/assets/js/29.c0821725.js"><link rel="prefetch" href="/assets/js/3.fa025813.js"><link rel="prefetch" href="/assets/js/30.f4e87220.js"><link rel="prefetch" href="/assets/js/31.07b7b4bc.js"><link rel="prefetch" href="/assets/js/32.c7768317.js"><link rel="prefetch" href="/assets/js/33.e5a946aa.js"><link rel="prefetch" href="/assets/js/34.21cedde9.js"><link rel="prefetch" href="/assets/js/35.20120b69.js"><link rel="prefetch" href="/assets/js/36.d6b5417e.js"><link rel="prefetch" href="/assets/js/37.dec4172d.js"><link rel="prefetch" href="/assets/js/38.14b2ce1d.js"><link rel="prefetch" href="/assets/js/39.4509d48f.js"><link rel="prefetch" href="/assets/js/4.1071f49d.js"><link rel="prefetch" href="/assets/js/40.e9782334.js"><link rel="prefetch" href="/assets/js/41.ee431639.js"><link rel="prefetch" href="/assets/js/42.39759555.js"><link rel="prefetch" href="/assets/js/43.e33884d5.js"><link rel="prefetch" href="/assets/js/44.9af7103a.js"><link rel="prefetch" href="/assets/js/45.03684541.js"><link rel="prefetch" href="/assets/js/46.e21db37d.js"><link rel="prefetch" href="/assets/js/47.005ea17f.js"><link rel="prefetch" href="/assets/js/48.a80d65e9.js"><link rel="prefetch" href="/assets/js/49.4dd5aef8.js"><link rel="prefetch" href="/assets/js/5.ed830427.js"><link rel="prefetch" href="/assets/js/50.0f7cf510.js"><link rel="prefetch" href="/assets/js/51.c1364a00.js"><link rel="prefetch" href="/assets/js/52.16345439.js"><link rel="prefetch" href="/assets/js/53.c48a60c9.js"><link rel="prefetch" href="/assets/js/54.3aa02d6a.js"><link rel="prefetch" href="/assets/js/55.f381771b.js"><link rel="prefetch" href="/assets/js/56.73628d0b.js"><link rel="prefetch" href="/assets/js/57.5fc03914.js"><link rel="prefetch" href="/assets/js/58.857b2fa0.js"><link rel="prefetch" href="/assets/js/59.179de49f.js"><link rel="prefetch" href="/assets/js/6.198c95d2.js"><link rel="prefetch" href="/assets/js/60.cd1c4e9c.js"><link rel="prefetch" href="/assets/js/61.208f55ca.js"><link rel="prefetch" href="/assets/js/62.d8b75d55.js"><link rel="prefetch" href="/assets/js/63.dccb4f7b.js"><link rel="prefetch" href="/assets/js/64.aa3d3f4e.js"><link rel="prefetch" href="/assets/js/65.9a1f5fe8.js"><link rel="prefetch" href="/assets/js/66.58d547c8.js"><link rel="prefetch" href="/assets/js/67.78ea99f3.js"><link rel="prefetch" href="/assets/js/68.dd4e8ad4.js"><link rel="prefetch" href="/assets/js/69.3155465c.js"><link rel="prefetch" href="/assets/js/7.4a1c79b1.js"><link rel="prefetch" href="/assets/js/70.e1cfe9ac.js"><link rel="prefetch" href="/assets/js/71.83067328.js"><link rel="prefetch" href="/assets/js/72.64796569.js"><link rel="prefetch" href="/assets/js/73.37e41412.js"><link rel="prefetch" href="/assets/js/74.815b9930.js"><link rel="prefetch" href="/assets/js/75.3b0dcb0f.js"><link rel="prefetch" href="/assets/js/76.216c2364.js"><link rel="prefetch" href="/assets/js/77.7ee123bf.js"><link rel="prefetch" href="/assets/js/78.bfef42e0.js"><link rel="prefetch" href="/assets/js/79.0f89d06e.js"><link rel="prefetch" href="/assets/js/8.c0bb5d19.js"><link rel="prefetch" href="/assets/js/80.bbedecb3.js"><link rel="prefetch" href="/assets/js/81.32437e5b.js"><link rel="prefetch" href="/assets/js/82.f0b84853.js"><link rel="prefetch" href="/assets/js/83.a62bfb83.js"><link rel="prefetch" href="/assets/js/84.c6da1415.js"><link rel="prefetch" href="/assets/js/85.39d84eaf.js"><link rel="prefetch" href="/assets/js/86.d3e18403.js"><link rel="prefetch" href="/assets/js/87.48754d1e.js"><link rel="prefetch" href="/assets/js/88.6a1807ac.js"><link rel="prefetch" href="/assets/js/89.ea24b078.js"><link rel="prefetch" href="/assets/js/90.b053db53.js"><link rel="prefetch" href="/assets/js/91.7b4257c8.js"><link rel="prefetch" href="/assets/js/92.9b3dddef.js"><link rel="prefetch" href="/assets/js/93.44c6599d.js"><link rel="prefetch" href="/assets/js/94.eb202008.js"><link rel="prefetch" href="/assets/js/95.e48ae33c.js"><link rel="prefetch" href="/assets/js/96.ef0b1e9d.js"><link rel="prefetch" href="/assets/js/97.9e05831f.js"><link rel="prefetch" href="/assets/js/98.2715c69d.js"><link rel="prefetch" href="/assets/js/99.30c7de39.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d130a179.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Self Study</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link router-link-active">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link router-link-active">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Projects/webdesign/" aria-current="page" class="sidebar-link">Introdcution</a></li><li><a href="/Projects/webdesign/01-natours-project.html" class="sidebar-link">Natours Project</a></li><li><a href="/Projects/webdesign/02-web-component.html" aria-current="page" class="active sidebar-link">Web Components</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Projects/webdesign/02-web-component.html#dropdown-menu" class="sidebar-link">Dropdown Menu</a></li></ul></li><li><a href="/Projects/webdesign/2048.html" class="sidebar-link">2048 game</a></li><li><a href="/Projects/webdesign/accordion.html" class="sidebar-link">Accordion</a></li><li><a href="/Projects/webdesign/navbar.html" class="sidebar-link">NavBar</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="web-components"><a href="#web-components" class="header-anchor">#</a> Web Components</h1> <h2 id="dropdown-menu"><a href="#dropdown-menu" class="header-anchor">#</a> Dropdown Menu</h2> <section class="demo-and-code-wrapper"><div><div id="home" class="home1">Home</div></div> <div class="code-control" style="top:0px;cursor:pointer;"><span class="control-btn" style="display:;">
+            hide code
+            <i class="arrow-icon" style="transform:rotate(0);"></i></span> <div class="online-wrapper"><form target="_blank" action="https://codepen.io/pen/define" method="post" class="demo-and-code-online-edit-wrapper"><input type="hidden" name="data" value="{&quot;js&quot;:&quot;new Vue({\n\tel: '#app', \n\t\n})&quot;,&quot;css&quot;:&quot;&quot;,&quot;html&quot;:&quot;&lt;div id=\&quot;app\&quot;&gt;\n\n&lt;div&gt;\n  &lt;div class=\&quot;home1\&quot; id=\&quot;home\&quot;&gt;Home&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;&quot;,&quot;layout&quot;:&quot;left&quot;,&quot;editors&quot;:&quot;101&quot;,&quot;js_external&quot;:&quot;https://unpkg.com/vue/dist/vue.js&quot;,&quot;css_external&quot;:&quot;&quot;,&quot;js_pre_processor&quot;:&quot;babel&quot;}"> <!----> <!----> <button type="submit" data-tip="Codepen"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve"><g><path d="M250.001,0C111.927,0,0,111.927,0,250.001C0,388.077,111.927,500,250.001,500C388.073,500,500,388.077,500,250.001
+        C500,111.927,388.073,0,250.001,0z M250.001,458.943c-115.212,0-208.941-93.733-208.941-208.942
+        c0-115.208,93.729-208.941,208.941-208.941c115.208,0,208.938,93.733,208.938,208.941
+        C458.939,365.21,365.21,458.943,250.001,458.943z"></path> <path d="M404.462,201.172c-0.028-0.195-0.076-0.382-0.109-0.577c-0.065-0.374-0.135-0.748-0.232-1.114
+        c-0.057-0.22-0.138-0.431-0.206-0.642c-0.106-0.326-0.212-0.651-0.342-0.968c-0.091-0.22-0.196-0.439-0.297-0.651
+        c-0.14-0.3-0.285-0.593-0.452-0.877c-0.122-0.212-0.251-0.416-0.377-0.618c-0.18-0.277-0.362-0.546-0.562-0.806
+        c-0.146-0.194-0.3-0.39-0.454-0.577c-0.212-0.243-0.432-0.487-0.664-0.716c-0.174-0.178-0.346-0.357-0.528-0.521
+        c-0.244-0.219-0.496-0.431-0.752-0.633c-0.198-0.155-0.395-0.31-0.602-0.456c-0.078-0.049-0.146-0.114-0.22-0.163L257.369,97.656
+        c-4.464-2.976-10.274-2.976-14.738,0l-141.295,94.196c-0.073,0.049-0.142,0.114-0.219,0.163c-0.208,0.146-0.403,0.301-0.598,0.456
+        c-0.26,0.203-0.512,0.415-0.752,0.633c-0.187,0.164-0.357,0.342-0.533,0.521c-0.231,0.229-0.451,0.473-0.658,0.716
+        c-0.159,0.188-0.313,0.383-0.459,0.577c-0.195,0.26-0.383,0.529-0.557,0.806c-0.134,0.203-0.26,0.406-0.382,0.618
+        c-0.163,0.284-0.309,0.577-0.451,0.877c-0.102,0.211-0.208,0.431-0.297,0.651c-0.13,0.317-0.236,0.642-0.341,0.968
+        c-0.07,0.211-0.146,0.422-0.208,0.642c-0.097,0.366-0.162,0.74-0.231,1.114c-0.032,0.195-0.081,0.382-0.106,0.577
+        c-0.077,0.569-0.122,1.146-0.122,1.732v94.197c0,0.585,0.044,1.162,0.122,1.74c0.025,0.188,0.074,0.382,0.106,0.568
+        c0.069,0.374,0.134,0.748,0.231,1.114c0.062,0.22,0.138,0.432,0.208,0.643c0.105,0.324,0.211,0.65,0.341,0.975
+        c0.089,0.222,0.195,0.433,0.297,0.645c0.143,0.3,0.289,0.592,0.451,0.885c0.122,0.204,0.248,0.406,0.382,0.61
+        c0.174,0.276,0.362,0.545,0.557,0.806c0.146,0.203,0.301,0.391,0.459,0.577c0.208,0.243,0.427,0.488,0.658,0.716
+        c0.175,0.178,0.346,0.357,0.533,0.52c0.24,0.221,0.492,0.432,0.752,0.635c0.195,0.155,0.391,0.31,0.598,0.454
+        c0.077,0.05,0.146,0.115,0.219,0.163l141.295,94.197c2.231,1.487,4.802,2.236,7.371,2.236c2.566,0,5.135-0.749,7.368-2.236
+        l141.295-94.197c0.074-0.048,0.142-0.113,0.22-0.163c0.207-0.145,0.403-0.299,0.602-0.454c0.256-0.203,0.508-0.414,0.752-0.635
+        c0.183-0.162,0.354-0.342,0.528-0.52c0.232-0.228,0.452-0.473,0.664-0.716c0.154-0.187,0.308-0.374,0.454-0.577
+        c0.2-0.261,0.383-0.529,0.562-0.806c0.126-0.204,0.255-0.406,0.377-0.61c0.167-0.293,0.312-0.585,0.452-0.885
+        c0.101-0.212,0.206-0.423,0.297-0.645c0.13-0.324,0.235-0.65,0.342-0.975c0.068-0.211,0.149-0.423,0.206-0.643
+        c0.098-0.366,0.167-0.74,0.232-1.114c0.033-0.187,0.081-0.381,0.109-0.568c0.073-0.578,0.119-1.155,0.119-1.74v-94.197
+        C404.581,202.318,404.535,201.741,404.462,201.172z M263.286,133.533l104.088,69.387l-46.493,31.103l-57.595-38.527V133.533z
+         M236.715,133.533v61.963l-57.592,38.527l-46.497-31.103L236.715,133.533z M121.99,227.771l33.238,22.231l-33.238,22.233V227.771z
+         M236.715,366.471l-104.088-69.388l46.497-31.094l57.592,38.52V366.471z M250.001,281.431l-46.988-31.429l46.988-31.428
+        l46.985,31.428L250.001,281.431z M263.286,366.471v-61.962l57.595-38.52l46.493,31.094L263.286,366.471z M378.01,272.234
+        l-33.233-22.233l33.233-22.231V272.234z"></path></g></svg></button></form><form target="_blank" action="https://jsfiddle.net/api/post/library/pure" method="post" class="demo-and-code-online-edit-wrapper"><!----> <input type="hidden" name="js" value=""> <input type="hidden" name="css" value=""> <input type="hidden" name="html" value="&lt;div&gt;
+  &lt;div class=&quot;home1&quot; id=&quot;home&quot;&gt;Home&lt;/div&gt;
+&lt;/div&gt;"> <input type="hidden" name="panel_js" value="3"> <input type="hidden" name="resources" value="https://unpkg.com/vue/dist/vue.js"> <!----> <button type="submit" data-tip="JSFiddle"><svg t="1547088289967" viewBox="0 0 1170 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1952" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon"><path d="M1028.571429 441.142857q63.428571 26.285714 102.571428 83.142857T1170.285714 650.857143q0 93.714286-67.428571 160.285714T940 877.714286q-2.285714 0-6.571429-0.285715t-6-0.285714H232q-97.142857-5.714286-164.571429-71.714286T0 645.142857q0-62.857143 31.428571-116t84-84q-6.857143-22.285714-6.857142-46.857143 0-65.714286 46.857142-112t113.714286-46.285714q54.285714 0 98.285714 33.142857 42.857143-88 127.142858-141.714286t186.571428-53.714285q94.857143 0 174.857143 46T982.571429 248.571429t46.571428 172q0 3.428571-0.285714 10.285714t-0.285714 10.285714zM267.428571 593.142857q0 69.714286 48 110.285714t118.857143 40.571429q78.285714 0 137.142857-56.571429-9.142857-11.428571-27.142857-32.285714T519.428571 626.285714q-38.285714 37.142857-82.285714 37.142857-31.428571 0-53.428571-19.142857T361.714286 594.285714q0-30.285714 22-49.714285t52.285714-19.428572q25.142857 0 48.285714 12t41.714286 31.428572 37.142857 42.857142 39.428572 46.857143 44 42.857143 55.428571 31.428572 69.428571 12q69.142857 0 116.857143-40.857143T936 594.857143q0-69.142857-48-109.714286t-118.285714-40.571428q-81.714286 0-137.714286 55.428571l53.142857 61.714286q37.714286-36.571429 81.142857-36.571429 29.714286 0 52.571429 18.857143t22.857143 48q0 32.571429-21.142857 52.285714t-53.714286 19.714286q-24.571429 0-47.142857-12t-41.142857-31.428571-37.428572-42.857143-39.714286-46.857143-44.285714-42.857143-55.142857-31.428571T434.285714 444.571429q-69.714286 0-118.285714 40.285714T267.428571 593.142857z" p-id="1953"></path></svg></button></form><form target="_blank" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" class="demo-and-code-online-edit-wrapper"><!----> <!----> <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgFYLIgDGA9qgC4yVIgA6qEAtgA6kBOFABAGoCuMLmHakmXAOQA3AeIbM2nLgEEWLISLHicAehUsc0mLNQNUMAO68BACmAMuDrjCiIJAYgCGq8QBp7jqlYoDypXcQAePW0APl9_BzJWcmoKOFdgZVUuAF8_VGyAShBckD0DASRQMkoU2nDAlmCqaIYGcPQISRbUB3bOrmJguDgAXjoQAAtRGABGca4IdDHJ6fHogAlp8O0Orradzu79hqaYI9RwuGJ2CBYKc-2rm7uHuAoAT1gH7TfPs4Zij4QGhMLgJhQmFBKiRyFQaIh6BddgsluMvCw1ttdtFASAWB5iABrDwAcxg-Dg5Gh1ThFGhmBY1EwqGIEHg0MMtFOb2K2T52SAA"> <input type="hidden" name="query" value="module=App.vue"> <!----> <!----> <button type="submit" data-tip="CodeSandbox"><svg t="1547088313123" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2783" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon"><path d="M737.828571 166.857143l0.457143-0.228572h0.228572L512 36.571429 285.6 166.628571h-0.228571l0.8 0.342858L100 274.285714v475.428572L512 987.428571l412-237.714285V274.285714l-186.171429-107.428571zM478.514286 890.971429L314.971429 796.571429V637.028571L166.857143 552.914286V353.028571l311.657143 179.771429v358.171429zM199.085714 294.285714l153.942857-88.914285 158.742858 91.085714 158.971428-91.314286 154.514286 89.142857-313.028572 180.571429-313.142857-180.571429zM857.142857 553.485714l-147.2 83.542857v158.971429l-164.457143 94.857143V533.028571L857.142857 353.257143v200.228571z" p-id="2784"></path></svg></button></form></div></div> <div class="code-wrapper" style="max-height:9999px;"><div class="language-vue extra-class"><pre v-pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>home1<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>home<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre></div></div></section></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Projects/webdesign/01-natours-project.html" class="prev">
+        Natours Project
+      </a></span> <span class="next"><a href="/Projects/webdesign/2048.html">
+        2048 game
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ee7b91ca.js" defer></script><script src="/assets/js/2.854868f9.js" defer></script><script src="/assets/js/9.687fcfc4.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python Built in var and function | Self Study</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.d130a179.css" as="style"><link rel="preload" href="/assets/js/app.ee7b91ca.js" as="script"><link rel="preload" href="/assets/js/2.854868f9.js" as="script"><link rel="preload" href="/assets/js/87.48754d1e.js" as="script"><link rel="prefetch" href="/assets/js/10.710e638e.js"><link rel="prefetch" href="/assets/js/100.e57a7cb1.js"><link rel="prefetch" href="/assets/js/101.1ba05fbe.js"><link rel="prefetch" href="/assets/js/102.7d66de9f.js"><link rel="prefetch" href="/assets/js/103.da7e04d9.js"><link rel="prefetch" href="/assets/js/104.1ec9f956.js"><link rel="prefetch" href="/assets/js/105.cad4434e.js"><link rel="prefetch" href="/assets/js/106.a62ec667.js"><link rel="prefetch" href="/assets/js/107.ea382a0b.js"><link rel="prefetch" href="/assets/js/108.110d79ec.js"><link rel="prefetch" href="/assets/js/109.0c59765e.js"><link rel="prefetch" href="/assets/js/11.8b2e71f0.js"><link rel="prefetch" href="/assets/js/110.32992d37.js"><link rel="prefetch" href="/assets/js/111.c19466fa.js"><link rel="prefetch" href="/assets/js/112.b75fce57.js"><link rel="prefetch" href="/assets/js/113.43408aa0.js"><link rel="prefetch" href="/assets/js/114.a90aa80c.js"><link rel="prefetch" href="/assets/js/115.758dba0e.js"><link rel="prefetch" href="/assets/js/116.5ba6fbf1.js"><link rel="prefetch" href="/assets/js/117.46b7faf9.js"><link rel="prefetch" href="/assets/js/118.d590146f.js"><link rel="prefetch" href="/assets/js/119.698a7e10.js"><link rel="prefetch" href="/assets/js/12.82306cd1.js"><link rel="prefetch" href="/assets/js/120.44c4167b.js"><link rel="prefetch" href="/assets/js/121.06af09b2.js"><link rel="prefetch" href="/assets/js/122.55e212e5.js"><link rel="prefetch" href="/assets/js/123.8ee2b8e0.js"><link rel="prefetch" href="/assets/js/124.f9273447.js"><link rel="prefetch" href="/assets/js/125.bd185bfb.js"><link rel="prefetch" href="/assets/js/126.4b835cb3.js"><link rel="prefetch" href="/assets/js/127.341366e2.js"><link rel="prefetch" href="/assets/js/128.22bbb0ec.js"><link rel="prefetch" href="/assets/js/129.ef876ca3.js"><link rel="prefetch" href="/assets/js/13.b352d9d8.js"><link rel="prefetch" href="/assets/js/130.87392767.js"><link rel="prefetch" href="/assets/js/131.9f546830.js"><link rel="prefetch" href="/assets/js/132.ea873112.js"><link rel="prefetch" href="/assets/js/133.04f578d5.js"><link rel="prefetch" href="/assets/js/134.d64642cf.js"><link rel="prefetch" href="/assets/js/14.2489828d.js"><link rel="prefetch" href="/assets/js/15.b2e1df7c.js"><link rel="prefetch" href="/assets/js/16.ff363360.js"><link rel="prefetch" href="/assets/js/17.a5581f62.js"><link rel="prefetch" href="/assets/js/18.a2d2b7fd.js"><link rel="prefetch" href="/assets/js/19.59293f5e.js"><link rel="prefetch" href="/assets/js/20.32777e6b.js"><link rel="prefetch" href="/assets/js/21.44e5812f.js"><link rel="prefetch" href="/assets/js/22.a4a77d2a.js"><link rel="prefetch" href="/assets/js/23.4c071c86.js"><link rel="prefetch" href="/assets/js/24.12309585.js"><link rel="prefetch" href="/assets/js/25.63bacda3.js"><link rel="prefetch" href="/assets/js/26.16e8c890.js"><link rel="prefetch" href="/assets/js/27.827ddf2d.js"><link rel="prefetch" href="/assets/js/28.0a1c9fe1.js"><link rel="prefetch" href="/assets/js/29.c0821725.js"><link rel="prefetch" href="/assets/js/3.fa025813.js"><link rel="prefetch" href="/assets/js/30.f4e87220.js"><link rel="prefetch" href="/assets/js/31.07b7b4bc.js"><link rel="prefetch" href="/assets/js/32.c7768317.js"><link rel="prefetch" href="/assets/js/33.e5a946aa.js"><link rel="prefetch" href="/assets/js/34.21cedde9.js"><link rel="prefetch" href="/assets/js/35.20120b69.js"><link rel="prefetch" href="/assets/js/36.d6b5417e.js"><link rel="prefetch" href="/assets/js/37.dec4172d.js"><link rel="prefetch" href="/assets/js/38.14b2ce1d.js"><link rel="prefetch" href="/assets/js/39.4509d48f.js"><link rel="prefetch" href="/assets/js/4.1071f49d.js"><link rel="prefetch" href="/assets/js/40.e9782334.js"><link rel="prefetch" href="/assets/js/41.ee431639.js"><link rel="prefetch" href="/assets/js/42.39759555.js"><link rel="prefetch" href="/assets/js/43.e33884d5.js"><link rel="prefetch" href="/assets/js/44.9af7103a.js"><link rel="prefetch" href="/assets/js/45.03684541.js"><link rel="prefetch" href="/assets/js/46.e21db37d.js"><link rel="prefetch" href="/assets/js/47.005ea17f.js"><link rel="prefetch" href="/assets/js/48.a80d65e9.js"><link rel="prefetch" href="/assets/js/49.4dd5aef8.js"><link rel="prefetch" href="/assets/js/5.ed830427.js"><link rel="prefetch" href="/assets/js/50.0f7cf510.js"><link rel="prefetch" href="/assets/js/51.c1364a00.js"><link rel="prefetch" href="/assets/js/52.16345439.js"><link rel="prefetch" href="/assets/js/53.c48a60c9.js"><link rel="prefetch" href="/assets/js/54.3aa02d6a.js"><link rel="prefetch" href="/assets/js/55.f381771b.js"><link rel="prefetch" href="/assets/js/56.73628d0b.js"><link rel="prefetch" href="/assets/js/57.5fc03914.js"><link rel="prefetch" href="/assets/js/58.857b2fa0.js"><link rel="prefetch" href="/assets/js/59.179de49f.js"><link rel="prefetch" href="/assets/js/6.198c95d2.js"><link rel="prefetch" href="/assets/js/60.cd1c4e9c.js"><link rel="prefetch" href="/assets/js/61.208f55ca.js"><link rel="prefetch" href="/assets/js/62.d8b75d55.js"><link rel="prefetch" href="/assets/js/63.dccb4f7b.js"><link rel="prefetch" href="/assets/js/64.aa3d3f4e.js"><link rel="prefetch" href="/assets/js/65.9a1f5fe8.js"><link rel="prefetch" href="/assets/js/66.58d547c8.js"><link rel="prefetch" href="/assets/js/67.78ea99f3.js"><link rel="prefetch" href="/assets/js/68.dd4e8ad4.js"><link rel="prefetch" href="/assets/js/69.3155465c.js"><link rel="prefetch" href="/assets/js/7.4a1c79b1.js"><link rel="prefetch" href="/assets/js/70.e1cfe9ac.js"><link rel="prefetch" href="/assets/js/71.83067328.js"><link rel="prefetch" href="/assets/js/72.64796569.js"><link rel="prefetch" href="/assets/js/73.37e41412.js"><link rel="prefetch" href="/assets/js/74.815b9930.js"><link rel="prefetch" href="/assets/js/75.3b0dcb0f.js"><link rel="prefetch" href="/assets/js/76.216c2364.js"><link rel="prefetch" href="/assets/js/77.7ee123bf.js"><link rel="prefetch" href="/assets/js/78.bfef42e0.js"><link rel="prefetch" href="/assets/js/79.0f89d06e.js"><link rel="prefetch" href="/assets/js/8.c0bb5d19.js"><link rel="prefetch" href="/assets/js/80.bbedecb3.js"><link rel="prefetch" href="/assets/js/81.32437e5b.js"><link rel="prefetch" href="/assets/js/82.f0b84853.js"><link rel="prefetch" href="/assets/js/83.a62bfb83.js"><link rel="prefetch" href="/assets/js/84.c6da1415.js"><link rel="prefetch" href="/assets/js/85.39d84eaf.js"><link rel="prefetch" href="/assets/js/86.d3e18403.js"><link rel="prefetch" href="/assets/js/88.6a1807ac.js"><link rel="prefetch" href="/assets/js/89.ea24b078.js"><link rel="prefetch" href="/assets/js/9.687fcfc4.js"><link rel="prefetch" href="/assets/js/90.b053db53.js"><link rel="prefetch" href="/assets/js/91.7b4257c8.js"><link rel="prefetch" href="/assets/js/92.9b3dddef.js"><link rel="prefetch" href="/assets/js/93.44c6599d.js"><link rel="prefetch" href="/assets/js/94.eb202008.js"><link rel="prefetch" href="/assets/js/95.e48ae33c.js"><link rel="prefetch" href="/assets/js/96.ef0b1e9d.js"><link rel="prefetch" href="/assets/js/97.9e05831f.js"><link rel="prefetch" href="/assets/js/98.2715c69d.js"><link rel="prefetch" href="/assets/js/99.30c7de39.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d130a179.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Self Study</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link router-link-active">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link router-link-active">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/back-end/Python/" aria-current="page" class="sidebar-link">Python</a></li><li><a href="/back-end/Python/built-in.html" aria-current="page" class="active sidebar-link">Python Built in var and function</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#name" class="sidebar-link">_name_</a></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#zip" class="sidebar-link">zip()</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#return-value" class="sidebar-link">Return value</a></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#unzip" class="sidebar-link">Unzip</a></li></ul></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#repr-and-str" class="sidebar-link">repr() and str()</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#parameters" class="sidebar-link">Parameters</a></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#return-value-2" class="sidebar-link">Return value</a></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#how-them-works-in-python" class="sidebar-link">How them works in Python?</a></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#differences" class="sidebar-link">Differences</a></li><li class="sidebar-sub-header"><a href="/back-end/Python/built-in.html#how-to-make-them-work-for-our-own-defined-classes" class="sidebar-link">How to make them work for our own defined classes?</a></li></ul></li></ul></li><li><a href="/back-end/Python/datatypes.html" class="sidebar-link">Python Data Types</a></li><li><a href="/back-end/Python/flowcontrol.html" class="sidebar-link">Flow Control</a></li><li><a href="/back-end/Python/generator.html" class="sidebar-link">Python Generator</a></li><li><a href="/back-end/Python/iterator.html" class="sidebar-link">Python Iterator</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="python-built-in-var-and-function"><a href="#python-built-in-var-and-function" class="header-anchor">#</a> Python Built in var and function</h1> <h2 id="name"><a href="#name" class="header-anchor">#</a> <strong>name</strong></h2> <p>Since there is no main() function in Python, when the command to run a python program is given to the interpreter, the code that is at level 0 indentation is to be executed. However, before doing that, it will define a few special variables. <code>__name__</code> is one such special variable. If the source file is executed as the main program, the interpreter sets the <code>__name__</code> variable to have a value “<code>__main__</code>”. If this file is being imported from another module, <code>__name__</code> will be set to the module’s name.</p> <p><strong><code>__name__</code> is a built-in variable which evaluates to the name of the current module.</strong> Thus it can be used to check whether the current script is being run on its own or being imported somewhere else by combining it with if statement, as shown below.</p> <p><strong>File1</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;File1 __name__ = %s&quot;</span> <span class="token operator">%</span>__name__<span class="token punctuation">)</span>
+  
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span> 
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;File1 is being run directly&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span> 
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;File1 is being imported&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>File2</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> File1 
+  
+<span class="token keyword">print</span> <span class="token string">&quot;File2 __name__ = %s&quot;</span> <span class="token operator">%</span>__name__ 
+  
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span> 
+    <span class="token keyword">print</span> <span class="token string">&quot;File2 is being run directly&quot;</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span> 
+    <span class="token keyword">print</span> <span class="token string">&quot;File2 is being imported&quot;</span>
+</code></pre></div><p><strong>Output</strong></p> <div class="language- extra-class"><pre class="language-text"><code>Now the interpreter is given the command to run File1.py.
+python File1.py
+Output :
+File1 __name__ = __main__
+File1 is being run directly
+
+
+And then File2.py is run.
+python File2.py
+Output :
+File1 __name__ = File1
+File1 is being imported
+File2 __name__ = __main__
+File2 is being run directly
+</code></pre></div><h2 id="zip"><a href="#zip" class="header-anchor">#</a> zip()</h2> <p>The zip() function takes iterables (can be zero or more), aggregates them in a tuple, and return it.</p> <p><code>zip(*iterables)</code>: <code>iterables</code> can be built-in iterables (like: list, string, dict), or user-defined iterables</p> <h3 id="return-value"><a href="#return-value" class="header-anchor">#</a> Return value</h3> <p>The <code>zip()</code> function returns an iterator of tuples based on the iterable objects.</p> <ul><li>If we do not pass any parameter, <code>zip()</code> returns an empty iterator</li> <li>If a single iterable is passed, <code>zip()</code> returns an iterator of tuples with each tuple having only one element.</li> <li>If multiple iterables are passed, <code>zip()</code> returns an iterator of tuples with each tuple having elements from all the iterables.</li></ul> <p>Suppose, two iterables are passed to <code>zip()</code>; one iterable containing three and other containing five elements. Then, the returned iterator will contain three tuples. It's because iterator stops when the shortest iterable is exhausted.</p> <p><strong>Example 1</strong></p> <div class="language-python extra-class"><pre class="language-python"><code>number_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+str_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'one'</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">,</span> <span class="token string">'three'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># No iterables are passed</span>
+result <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Converting itertor to list</span>
+result_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_list<span class="token punctuation">)</span>
+
+<span class="token comment"># Two iterables are passed</span>
+result <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>number_list<span class="token punctuation">,</span> str_list<span class="token punctuation">)</span>
+
+<span class="token comment"># Converting itertor to set</span>
+result_set <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_set<span class="token punctuation">)</span>
+</code></pre></div><p><strong>Output</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'three'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'one'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</code></pre></div><p><strong>Example 2 Different number of iterable elements</strong></p> <div class="language-python extra-class"><pre class="language-python"><code>numbersList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+str_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'one'</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">]</span>
+numbers_tuple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'ONE'</span><span class="token punctuation">,</span> <span class="token string">'TWO'</span><span class="token punctuation">,</span> <span class="token string">'THREE'</span><span class="token punctuation">,</span> <span class="token string">'FOUR'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Notice, the size of numbersList and numbers_tuple is different</span>
+result <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>numbersList<span class="token punctuation">,</span> numbers_tuple<span class="token punctuation">)</span>
+
+<span class="token comment"># Converting to set</span>
+result_set <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_set<span class="token punctuation">)</span>
+
+result <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>numbersList<span class="token punctuation">,</span> str_list<span class="token punctuation">,</span> numbers_tuple<span class="token punctuation">)</span>
+
+<span class="token comment"># Converting to set</span>
+result_set <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_set<span class="token punctuation">)</span>
+</code></pre></div><p><strong>Output</strong></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'TWO'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'THREE'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'ONE'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">,</span> <span class="token string">'TWO'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'one'</span><span class="token punctuation">,</span> <span class="token string">'ONE'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="unzip"><a href="#unzip" class="header-anchor">#</a> Unzip</h3> <p>The * operator can be used in conjunction with zip() to unzip the list.</p> <p><strong>Example 3</strong></p> <div class="language-python extra-class"><pre class="language-python"><code>coordinate <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">,</span> <span class="token string">'y'</span><span class="token punctuation">,</span> <span class="token string">'z'</span><span class="token punctuation">]</span>
+value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+result <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>coordinate<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+result_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_list<span class="token punctuation">)</span>
+
+c<span class="token punctuation">,</span> v <span class="token operator">=</span>  <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>result_list<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'c ='</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'v ='</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+</code></pre></div><p><strong>Output</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'x'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'y'</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'z'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+c <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'x'</span><span class="token punctuation">,</span> <span class="token string">'y'</span><span class="token punctuation">,</span> <span class="token string">'z'</span><span class="token punctuation">)</span>
+v <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="repr-and-str"><a href="#repr-and-str" class="header-anchor">#</a> repr() and str()</h2> <p>The repr() function returns a printable representation of the given object. The syntax of repr() is:</p> <p><code>repr(obj)</code></p> <h3 id="parameters"><a href="#parameters" class="header-anchor">#</a> Parameters</h3> <p>The <strong>repr()</strong> function takes a single parameter:</p> <ul><li>obj - the object whose printable representation has to be returned</li></ul> <p>The <strong>str()</strong> method takes three parameters:</p> <ul><li>object - The object whose string representation is to be returned. If not provided, returns the empty string</li> <li>encoding - Encoding of the given object. Defaults of UTF-8 when not provided.</li> <li>errors - Response when decoding fails. Defaults to 'strict'.</li></ul> <p>There are six types of errors:</p> <ul><li>strict - default response which raises a UnicodeDecodeError exception on failure</li> <li>ignore - ignores the unencodable Unicode from the result</li> <li>replace - replaces the unencodable Unicode to a question mark</li> <li>xmlcharrefreplace - inserts XML character reference instead of unencodable Unicode</li> <li>backslashreplace - inserts a \uNNNN espace sequence instead of unencodable Unicode</li> <li>namereplace - inserts a \N{...} escape sequence instead of unencodable Unicode</li></ul> <h3 id="return-value-2"><a href="#return-value-2" class="header-anchor">#</a> Return value</h3> <p>str() and repr() both are used to get a string representation of object.</p> <h3 id="how-them-works-in-python"><a href="#how-them-works-in-python" class="header-anchor">#</a> How them works in Python?</h3> <p><code>repr()</code></p> <div class="language-python extra-class"><pre class="language-python"><code>s <span class="token operator">=</span> <span class="token string">'Hello, Geeks.'</span>
+<span class="token keyword">print</span> <span class="token builtin">repr</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> 
+<span class="token keyword">print</span> <span class="token builtin">repr</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token operator">/</span><span class="token number">11.0</span><span class="token punctuation">)</span> 
+</code></pre></div><p><strong>Output:</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token string">'Hello, Geeks.'</span>
+<span class="token number">0.18181818181818182</span>
+</code></pre></div><p><code>str()</code></p> <div class="language-python extra-class"><pre class="language-python"><code>s <span class="token operator">=</span> <span class="token string">'Hello, Geeks.'</span>
+<span class="token keyword">print</span> <span class="token builtin">str</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> 
+<span class="token keyword">print</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token operator">/</span><span class="token number">11.0</span><span class="token punctuation">)</span> 
+</code></pre></div><p><strong>Output:</strong></p> <div class="language-python extra-class"><pre class="language-python"><code>Hello<span class="token punctuation">,</span> Geeks<span class="token punctuation">.</span>
+<span class="token number">0.181818181818</span>
+</code></pre></div><p>From above output, we can see if we print string using repr() function then it prints with a pair of quotes and if we calculate a value we get more precise value than str() function.</p> <p>When the result from repr() is passed to eval(), we will get the original object (for many types).</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token builtin">repr</span><span class="token punctuation">(</span>var<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token string">'foo'</span>
+</code></pre></div><h3 id="differences"><a href="#differences" class="header-anchor">#</a> Differences</h3> <ul><li>str() is used for creating output for end user while repr() is mainly used for debugging and development. repr’s goal is to be unambiguous and str’s is to be readable.</li> <li>repr() compute the “official” string representation of an object (a representation that has all information about the object) and str() is used to compute the “informal” string representation of an object (a representation that is useful for printing the object).</li> <li>The print statement and str() built-in function uses <code>__str__</code> to display the string representation of the object while the repr() built-in function uses <code>__repr__</code> to display the object.</li> <li><code>__str__</code>must return string object whereas <code>__repr__</code> can return any python expression.</li> <li>If <code>__str__</code> implementation is missing then <code>__repr__</code> function is used as fallback. There is no fallback if <code>__repr__</code> function implementation is missing.</li> <li>If <strong>repr</strong> function is returning String representation of the object, we can skip implementation of <strong>str</strong> function.</li></ul> <p><strong>Example</strong></p> <div class="language-python extra-class"><pre class="language-python"><code>
+edit
+play_arrow
+
+brightness_4
+<span class="token keyword">import</span> datetime 
+today <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+  
+<span class="token comment"># Prints readable format for date-time object </span>
+<span class="token keyword">print</span> <span class="token builtin">str</span><span class="token punctuation">(</span>today<span class="token punctuation">)</span> 
+  
+<span class="token comment"># prints the official format of date-time object </span>
+<span class="token keyword">print</span> <span class="token builtin">repr</span><span class="token punctuation">(</span>today<span class="token punctuation">)</span> 
+</code></pre></div><p><strong>Output</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token number">2016</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">22</span> <span class="token number">19</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">:</span><span class="token number">04.078030</span>
+datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2016</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">78030</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="how-to-make-them-work-for-our-own-defined-classes"><a href="#how-to-make-them-work-for-our-own-defined-classes" class="header-anchor">#</a> How to make them work for our own defined classes?</h3> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># Python program to demonstrate writing of __repr__ and </span>
+<span class="token comment"># __str__ for user defined classes </span>
+  
+<span class="token comment"># A user defined class to represent Complex numbers </span>
+<span class="token keyword">class</span> <span class="token class-name">Complex</span><span class="token punctuation">:</span> 
+  
+    <span class="token comment"># Constructor </span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> real<span class="token punctuation">,</span> imag<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+       self<span class="token punctuation">.</span>real <span class="token operator">=</span> real 
+       self<span class="token punctuation">.</span>imag <span class="token operator">=</span> imag 
+  
+    <span class="token comment"># For call to repr(). Prints object's information </span>
+    <span class="token keyword">def</span> <span class="token function">__repr__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+       <span class="token keyword">return</span> <span class="token string">'Rational(%s, %s)'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>real<span class="token punctuation">,</span> self<span class="token punctuation">.</span>imag<span class="token punctuation">)</span>     
+  
+    <span class="token comment"># For call to str(). Prints readable form </span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+       <span class="token keyword">return</span> <span class="token string">'%s + i%s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>real<span class="token punctuation">,</span> self<span class="token punctuation">.</span>imag<span class="token punctuation">)</span>     
+  
+  
+<span class="token comment"># Driver program to test above </span>
+t <span class="token operator">=</span> Complex<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span> 
+  
+<span class="token keyword">print</span> <span class="token builtin">str</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span>  <span class="token comment"># Same as &quot;print t&quot; </span>
+<span class="token keyword">print</span> <span class="token builtin">repr</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> 
+</code></pre></div><p><strong>Output</strong></p> <div class="language- extra-class"><pre class="language-text"><code>10 + i20
+Rational(10, 20)
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+    age <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> personName<span class="token punctuation">,</span> personAge<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> personName
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> personAge
+
+    <span class="token comment"># must return, otherwise repr(p) will throw TypeError: __repr__ returned non-string (type dict)</span>
+    <span class="token keyword">def</span> <span class="token function">__repr__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">'{name:'</span><span class="token operator">+</span>self<span class="token punctuation">.</span>name<span class="token operator">+</span><span class="token string">', age:'</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token operator">+</span> <span class="token string">'}'</span>
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">'Person(name='</span><span class="token operator">+</span>self<span class="token punctuation">.</span>name<span class="token operator">+</span><span class="token string">', age='</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token operator">+</span> <span class="token string">')'</span>
+
+p <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'Pankaj'</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">)</span>
+
+<span class="token comment"># __str__() example</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>__str__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+s <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+
+<span class="token comment"># __repr__() example</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>__repr__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>__repr__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">repr</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>Output</strong></p> <div class="language-python extra-class"><pre class="language-python"><code>Person<span class="token punctuation">(</span>name<span class="token operator">=</span>Pankaj<span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">34</span><span class="token punctuation">)</span>
+Person<span class="token punctuation">(</span>name<span class="token operator">=</span>Pankaj<span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">34</span><span class="token punctuation">)</span>
+Person<span class="token punctuation">(</span>name<span class="token operator">=</span>Pankaj<span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">34</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>name<span class="token punctuation">:</span>Pankaj<span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">34</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'str'</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>name<span class="token punctuation">:</span>Pankaj<span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">34</span><span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/back-end/Python/" class="prev router-link-active">
+        Python
+      </a></span> <span class="next"><a href="/back-end/Python/datatypes.html">
+        Python Data Types
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ee7b91ca.js" defer></script><script src="/assets/js/2.854868f9.js" defer></script><script src="/assets/js/87.48754d1e.js" defer></script>
+  </body>
+</html>

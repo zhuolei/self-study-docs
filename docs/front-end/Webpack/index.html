@@ -4,19 +4,138 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>What is Webpack | Self Study</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
     <meta name="description" content="">
-    
-    
-    <link rel="preload" href="/assets/css/styles.54b1c38a.css" as="style"><link rel="preload" href="/assets/js/app.54b1c38a.js" as="script"><link rel="preload" href="/assets/js/19.07880d2d.js" as="script"><link rel="prefetch" href="/assets/css/2.styles.f9a8dabf.css"><link rel="prefetch" href="/assets/js/1.92d32b32.js"><link rel="prefetch" href="/assets/js/10.bbcaad47.js"><link rel="prefetch" href="/assets/js/11.2007da97.js"><link rel="prefetch" href="/assets/js/12.3fbf1d4c.js"><link rel="prefetch" href="/assets/js/13.f007fecf.js"><link rel="prefetch" href="/assets/js/14.3f6e95a8.js"><link rel="prefetch" href="/assets/js/15.c7ae1c25.js"><link rel="prefetch" href="/assets/js/16.1a4c8332.js"><link rel="prefetch" href="/assets/js/17.0ffd18eb.js"><link rel="prefetch" href="/assets/js/18.a3d2c833.js"><link rel="prefetch" href="/assets/js/2.f9a8dabf.js"><link rel="prefetch" href="/assets/js/3.75f84647.js"><link rel="prefetch" href="/assets/js/4.c8ade8c4.js"><link rel="prefetch" href="/assets/js/5.ebe977e3.js"><link rel="prefetch" href="/assets/js/6.a3da09e0.js"><link rel="prefetch" href="/assets/js/7.9f163be8.js"><link rel="prefetch" href="/assets/js/8.b64480b9.js"><link rel="prefetch" href="/assets/js/9.0857b1ae.js">
-    <link rel="stylesheet" href="/assets/css/styles.54b1c38a.css">
+    <link rel="preload" href="/assets/css/0.styles.d130a179.css" as="style"><link rel="preload" href="/assets/js/app.ee7b91ca.js" as="script"><link rel="preload" href="/assets/js/2.854868f9.js" as="script"><link rel="preload" href="/assets/js/132.ea873112.js" as="script"><link rel="prefetch" href="/assets/js/10.710e638e.js"><link rel="prefetch" href="/assets/js/100.e57a7cb1.js"><link rel="prefetch" href="/assets/js/101.1ba05fbe.js"><link rel="prefetch" href="/assets/js/102.7d66de9f.js"><link rel="prefetch" href="/assets/js/103.da7e04d9.js"><link rel="prefetch" href="/assets/js/104.1ec9f956.js"><link rel="prefetch" href="/assets/js/105.cad4434e.js"><link rel="prefetch" href="/assets/js/106.a62ec667.js"><link rel="prefetch" href="/assets/js/107.ea382a0b.js"><link rel="prefetch" href="/assets/js/108.110d79ec.js"><link rel="prefetch" href="/assets/js/109.0c59765e.js"><link rel="prefetch" href="/assets/js/11.8b2e71f0.js"><link rel="prefetch" href="/assets/js/110.32992d37.js"><link rel="prefetch" href="/assets/js/111.c19466fa.js"><link rel="prefetch" href="/assets/js/112.b75fce57.js"><link rel="prefetch" href="/assets/js/113.43408aa0.js"><link rel="prefetch" href="/assets/js/114.a90aa80c.js"><link rel="prefetch" href="/assets/js/115.758dba0e.js"><link rel="prefetch" href="/assets/js/116.5ba6fbf1.js"><link rel="prefetch" href="/assets/js/117.46b7faf9.js"><link rel="prefetch" href="/assets/js/118.d590146f.js"><link rel="prefetch" href="/assets/js/119.698a7e10.js"><link rel="prefetch" href="/assets/js/12.82306cd1.js"><link rel="prefetch" href="/assets/js/120.44c4167b.js"><link rel="prefetch" href="/assets/js/121.06af09b2.js"><link rel="prefetch" href="/assets/js/122.55e212e5.js"><link rel="prefetch" href="/assets/js/123.8ee2b8e0.js"><link rel="prefetch" href="/assets/js/124.f9273447.js"><link rel="prefetch" href="/assets/js/125.bd185bfb.js"><link rel="prefetch" href="/assets/js/126.4b835cb3.js"><link rel="prefetch" href="/assets/js/127.341366e2.js"><link rel="prefetch" href="/assets/js/128.22bbb0ec.js"><link rel="prefetch" href="/assets/js/129.ef876ca3.js"><link rel="prefetch" href="/assets/js/13.b352d9d8.js"><link rel="prefetch" href="/assets/js/130.87392767.js"><link rel="prefetch" href="/assets/js/131.9f546830.js"><link rel="prefetch" href="/assets/js/133.04f578d5.js"><link rel="prefetch" href="/assets/js/134.d64642cf.js"><link rel="prefetch" href="/assets/js/14.2489828d.js"><link rel="prefetch" href="/assets/js/15.b2e1df7c.js"><link rel="prefetch" href="/assets/js/16.ff363360.js"><link rel="prefetch" href="/assets/js/17.a5581f62.js"><link rel="prefetch" href="/assets/js/18.a2d2b7fd.js"><link rel="prefetch" href="/assets/js/19.59293f5e.js"><link rel="prefetch" href="/assets/js/20.32777e6b.js"><link rel="prefetch" href="/assets/js/21.44e5812f.js"><link rel="prefetch" href="/assets/js/22.a4a77d2a.js"><link rel="prefetch" href="/assets/js/23.4c071c86.js"><link rel="prefetch" href="/assets/js/24.12309585.js"><link rel="prefetch" href="/assets/js/25.63bacda3.js"><link rel="prefetch" href="/assets/js/26.16e8c890.js"><link rel="prefetch" href="/assets/js/27.827ddf2d.js"><link rel="prefetch" href="/assets/js/28.0a1c9fe1.js"><link rel="prefetch" href="/assets/js/29.c0821725.js"><link rel="prefetch" href="/assets/js/3.fa025813.js"><link rel="prefetch" href="/assets/js/30.f4e87220.js"><link rel="prefetch" href="/assets/js/31.07b7b4bc.js"><link rel="prefetch" href="/assets/js/32.c7768317.js"><link rel="prefetch" href="/assets/js/33.e5a946aa.js"><link rel="prefetch" href="/assets/js/34.21cedde9.js"><link rel="prefetch" href="/assets/js/35.20120b69.js"><link rel="prefetch" href="/assets/js/36.d6b5417e.js"><link rel="prefetch" href="/assets/js/37.dec4172d.js"><link rel="prefetch" href="/assets/js/38.14b2ce1d.js"><link rel="prefetch" href="/assets/js/39.4509d48f.js"><link rel="prefetch" href="/assets/js/4.1071f49d.js"><link rel="prefetch" href="/assets/js/40.e9782334.js"><link rel="prefetch" href="/assets/js/41.ee431639.js"><link rel="prefetch" href="/assets/js/42.39759555.js"><link rel="prefetch" href="/assets/js/43.e33884d5.js"><link rel="prefetch" href="/assets/js/44.9af7103a.js"><link rel="prefetch" href="/assets/js/45.03684541.js"><link rel="prefetch" href="/assets/js/46.e21db37d.js"><link rel="prefetch" href="/assets/js/47.005ea17f.js"><link rel="prefetch" href="/assets/js/48.a80d65e9.js"><link rel="prefetch" href="/assets/js/49.4dd5aef8.js"><link rel="prefetch" href="/assets/js/5.ed830427.js"><link rel="prefetch" href="/assets/js/50.0f7cf510.js"><link rel="prefetch" href="/assets/js/51.c1364a00.js"><link rel="prefetch" href="/assets/js/52.16345439.js"><link rel="prefetch" href="/assets/js/53.c48a60c9.js"><link rel="prefetch" href="/assets/js/54.3aa02d6a.js"><link rel="prefetch" href="/assets/js/55.f381771b.js"><link rel="prefetch" href="/assets/js/56.73628d0b.js"><link rel="prefetch" href="/assets/js/57.5fc03914.js"><link rel="prefetch" href="/assets/js/58.857b2fa0.js"><link rel="prefetch" href="/assets/js/59.179de49f.js"><link rel="prefetch" href="/assets/js/6.198c95d2.js"><link rel="prefetch" href="/assets/js/60.cd1c4e9c.js"><link rel="prefetch" href="/assets/js/61.208f55ca.js"><link rel="prefetch" href="/assets/js/62.d8b75d55.js"><link rel="prefetch" href="/assets/js/63.dccb4f7b.js"><link rel="prefetch" href="/assets/js/64.aa3d3f4e.js"><link rel="prefetch" href="/assets/js/65.9a1f5fe8.js"><link rel="prefetch" href="/assets/js/66.58d547c8.js"><link rel="prefetch" href="/assets/js/67.78ea99f3.js"><link rel="prefetch" href="/assets/js/68.dd4e8ad4.js"><link rel="prefetch" href="/assets/js/69.3155465c.js"><link rel="prefetch" href="/assets/js/7.4a1c79b1.js"><link rel="prefetch" href="/assets/js/70.e1cfe9ac.js"><link rel="prefetch" href="/assets/js/71.83067328.js"><link rel="prefetch" href="/assets/js/72.64796569.js"><link rel="prefetch" href="/assets/js/73.37e41412.js"><link rel="prefetch" href="/assets/js/74.815b9930.js"><link rel="prefetch" href="/assets/js/75.3b0dcb0f.js"><link rel="prefetch" href="/assets/js/76.216c2364.js"><link rel="prefetch" href="/assets/js/77.7ee123bf.js"><link rel="prefetch" href="/assets/js/78.bfef42e0.js"><link rel="prefetch" href="/assets/js/79.0f89d06e.js"><link rel="prefetch" href="/assets/js/8.c0bb5d19.js"><link rel="prefetch" href="/assets/js/80.bbedecb3.js"><link rel="prefetch" href="/assets/js/81.32437e5b.js"><link rel="prefetch" href="/assets/js/82.f0b84853.js"><link rel="prefetch" href="/assets/js/83.a62bfb83.js"><link rel="prefetch" href="/assets/js/84.c6da1415.js"><link rel="prefetch" href="/assets/js/85.39d84eaf.js"><link rel="prefetch" href="/assets/js/86.d3e18403.js"><link rel="prefetch" href="/assets/js/87.48754d1e.js"><link rel="prefetch" href="/assets/js/88.6a1807ac.js"><link rel="prefetch" href="/assets/js/89.ea24b078.js"><link rel="prefetch" href="/assets/js/9.687fcfc4.js"><link rel="prefetch" href="/assets/js/90.b053db53.js"><link rel="prefetch" href="/assets/js/91.7b4257c8.js"><link rel="prefetch" href="/assets/js/92.9b3dddef.js"><link rel="prefetch" href="/assets/js/93.44c6599d.js"><link rel="prefetch" href="/assets/js/94.eb202008.js"><link rel="prefetch" href="/assets/js/95.e48ae33c.js"><link rel="prefetch" href="/assets/js/96.ef0b1e9d.js"><link rel="prefetch" href="/assets/js/97.9e05831f.js"><link rel="prefetch" href="/assets/js/98.2715c69d.js"><link rel="prefetch" href="/assets/js/99.30c7de39.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d130a179.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
-      Self Study
-    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Algorithm</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Algorithm/DataStructure/" class="nav-link">DataStructure</a></li></ul></div></div><div class="nav-item"><a href="/assets/" class="nav-link">assets</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">back-end</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/back-end/nodejs/" class="nav-link">nodejs</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">front-end</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/front-end/Javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/front-end/Typescript/" class="nav-link">Typescript</a></li><li class="dropdown-item"><!----><a href="/front-end/Webpack/" class="nav-link router-link-exact-active router-link-active">Webpack</a></li></ul></div></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Algorithm</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Algorithm/DataStructure/" class="nav-link">DataStructure</a></li></ul></div></div><div class="nav-item"><a href="/assets/" class="nav-link">assets</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">back-end</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/back-end/nodejs/" class="nav-link">nodejs</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">front-end</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/front-end/Javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/front-end/Typescript/" class="nav-link">Typescript</a></li><li class="dropdown-item"><!----><a href="/front-end/Webpack/" class="nav-link router-link-exact-active router-link-active">Webpack</a></li></ul></div></div><!----></nav><ul class="sidebar-links"><li><a href="/front-end/Webpack/" class="active sidebar-link">What is Webpack</a></li><li><a href="/front-end/Webpack/0-prepare.html" class="sidebar-link">Installation</a></li><li><a href="/front-end/Webpack/1-concepts.html" class="sidebar-link">Concepts</a></li><li><a href="/front-end/Webpack/2-loaders.html" class="sidebar-link">Loaders</a></li><li><a href="/front-end/Webpack/3-plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/front-end/Webpack/4-entryoutput.html" class="sidebar-link">Entry &amp;&amp; Output</a></li><li><a href="/front-end/Webpack/5-sourcemap.html" class="sidebar-link">Devtool </a></li><li><a href="/front-end/Webpack/8-babel.html" class="sidebar-link">Babel</a></li></ul></div><div class="page"><div class="content"><h1 id="what-is-webpack"><a href="#what-is-webpack" class="header-anchor">#</a> What is Webpack</h1><p>webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>Learn more about JavaScript modules and webpack modules <a href="https://webpack.js.org/concepts/modules/" target="_blank">here</a>.</p></div><p>Since version 4.0.0, webpack does not require a configuration file to bundle your project. Nevertheless, it is incredibly configurable to better fit your needs.</p></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><!----><span class="next"><a href="/front-end/Webpack/0-prepare.html">
-          Installation
-        </a> →
-      </span></p></div></div></div></div>
-    <script src="/assets/js/app.54b1c38a.js" defer></script><script src="/assets/js/19.07880d2d.js" defer></script>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Self Study</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/front-end/Webpack/" aria-current="page" class="active sidebar-link">What is Webpack</a></li><li><a href="/front-end/Webpack/0-prepare.html" class="sidebar-link">Installation</a></li><li><a href="/front-end/Webpack/1-concepts.html" class="sidebar-link">Concepts</a></li><li><a href="/front-end/Webpack/2-loaders.html" class="sidebar-link">Loaders</a></li><li><a href="/front-end/Webpack/3-plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/front-end/Webpack/4-entryoutput.html" class="sidebar-link">Entry &amp;&amp; Output</a></li><li><a href="/front-end/Webpack/5-sourcemap.html" class="sidebar-link">Devtool</a></li><li><a href="/front-end/Webpack/8-babel.html" class="sidebar-link">Babel</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="what-is-webpack"><a href="#what-is-webpack" class="header-anchor">#</a> What is Webpack</h1> <p>webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Learn more about JavaScript modules and webpack modules <a href="https://webpack.js.org/concepts/modules/" target="_blank">here</a>.</p></div> <p>Since version 4.0.0, webpack does not require a configuration file to bundle your project. Nevertheless, it is incredibly configurable to better fit your needs.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/front-end/Webpack/0-prepare.html">
+        Installation
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ee7b91ca.js" defer></script><script src="/assets/js/2.854868f9.js" defer></script><script src="/assets/js/132.ea873112.js" defer></script>
   </body>
 </html>
