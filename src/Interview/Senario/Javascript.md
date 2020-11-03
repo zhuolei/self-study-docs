@@ -94,6 +94,92 @@ function flatten(arr) {
 <a href="https://www.jianshu.com/p/b1fb3434e1f5">More</a>
 :::
 
+## How to Flatten/Unflatten Object
+
+### version 1
+
+Before flatten
+```json
+{
+  "prop1": {
+    "prop1_1": 1,
+    "prop1_2": "second",
+    "prop1_3": [3, 4],
+  },
+  "prop2": {
+    "prop2_1": [
+      {
+        "prop2_2": "1",
+      },
+      {
+        "prop2_3": "3",
+      }
+    ],
+  }
+}
+```
+After flatten
+```json
+{
+  "prop1.prop1_1": 1,
+  "prop1.prop1_2": "second",
+  "prop1.prop1_3[0]": 3,
+  "prop1.prop1_3[1]": 4,
+  "prop2.prop2_1[0].prop2_2": "1",
+  "prop2.prop2_1[1].prop2_3": "3",
+}
+```
+
+
+#### Flatten
+
+```js
+function flatten(obj) {
+  const merge = objs => {
+    const out = {};
+    objs.forEach(obj => {
+      Object.keys(obj).forEach(key => {
+        out[key] = obj[key];
+      })
+    })
+
+    return out;
+  }
+
+  // recursive
+  const flattenHelper = (value, key, item, isArray = false) => {
+    let out = {};
+
+    let newItem = key;
+    if (typeof item !== 'undefined' && item !== '') {
+      if (isArray) {
+        newItem = `${item}[${key}]`;
+      } else {
+        newItem = `${item}.${key}`;
+      }
+    }
+
+    if (typeof value !== 'object' || value === null) {
+      out[newItem] = value;
+      return out;
+    }
+
+    Object.keys(value).forEach(key => {
+      const isArray = Array.isArray(value);
+      const prop = flattenHelper(value[key], key, newItem, isArray);
+      out = merge([out, prop]);
+    })
+
+    return out;
+  }
+
+  return flattenHelper(obj);
+}
+```
+
+#### Unflatten
+
+
 ## Debounce && Throttle
 
 - throttle：将一个函数的调用频率限制在一定阈值内，例如 1s 内一个函数不能被调用两次。debounce：当调用函数n秒后，才会执行该动作，若在这n秒内又调用该函数则将取消前一次并重新计算执行时间，举个简单的例子，我们要根据用户输入做suggest，每当用户按下键盘的时候都可以取消前一次，并且只关心最后一次输入的时间就行了。
