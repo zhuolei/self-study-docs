@@ -183,7 +183,7 @@ await Promise.all()
 
 use for loop or for each
 
-### How to Capitalize the first letter of a string
+## How to Capitalize the first letter of a string
 
 ```js
 const cp = (str) => {
@@ -191,7 +191,7 @@ const cp = (str) => {
 }
 ```
 
-# How to find value based on object key
+## How to find value based on object key
 
 ```js
 locales = ['pt', 'es', 'de', 'fr', 'ja', 'en'];
@@ -209,8 +209,33 @@ const locale = 'en'
 const obj = urlList.find(x => locale in x);
 ```
 
-# How to check is js object empty?
+## How to check is js object empty?
 
 ```js
 export const isObjectEmpty = obj => !obj ? true : Object.keys(obj).length === 0 && obj.constructor === object;
+```
+
+## How to flatten an object?
+
+```js
+export default class {
+  static flattenObject(object) {
+    const merge = object => {
+      const out = {};
+
+      object.forEach(obj => {
+        Object.keys(obj).forEach(key => {
+          out[key] = obj[key];
+        })
+      })
+
+      return out;
+    }
+
+    const flatten = (obj, name, stem, isArray = false) => {
+      
+    }
+  }
+}
+
 ```
