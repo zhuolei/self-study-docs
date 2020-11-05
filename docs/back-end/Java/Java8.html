@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java8 | Self Study</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.168efa49.css" as="style"><link rel="preload" href="/assets/js/app.36d4b3ff.js" as="script"><link rel="preload" href="/assets/js/2.ac6f8352.js" as="script"><link rel="preload" href="/assets/js/82.7698341f.js" as="script"><link rel="prefetch" href="/assets/js/10.fc3bbda0.js"><link rel="prefetch" href="/assets/js/100.2836d11b.js"><link rel="prefetch" href="/assets/js/101.a656cbcd.js"><link rel="prefetch" href="/assets/js/102.409ac812.js"><link rel="prefetch" href="/assets/js/103.ed33ff2e.js"><link rel="prefetch" href="/assets/js/104.960aaecb.js"><link rel="prefetch" href="/assets/js/105.c0fd7edc.js"><link rel="prefetch" href="/assets/js/106.e84ee637.js"><link rel="prefetch" href="/assets/js/107.f49ffeac.js"><link rel="prefetch" href="/assets/js/108.32c2170f.js"><link rel="prefetch" href="/assets/js/109.2493935f.js"><link rel="prefetch" href="/assets/js/11.80bbe465.js"><link rel="prefetch" href="/assets/js/110.c9ca2a79.js"><link rel="prefetch" href="/assets/js/111.9d37c1d2.js"><link rel="prefetch" href="/assets/js/112.273e6cbb.js"><link rel="prefetch" href="/assets/js/113.7afa7aa6.js"><link rel="prefetch" href="/assets/js/114.17b37a46.js"><link rel="prefetch" href="/assets/js/115.0352e12b.js"><link rel="prefetch" href="/assets/js/116.f156995d.js"><link rel="prefetch" href="/assets/js/117.f5676ab9.js"><link rel="prefetch" href="/assets/js/118.54e71879.js"><link rel="prefetch" href="/assets/js/119.6596ab1b.js"><link rel="prefetch" href="/assets/js/12.90093a1b.js"><link rel="prefetch" href="/assets/js/120.38326801.js"><link rel="prefetch" href="/assets/js/121.08eb006e.js"><link rel="prefetch" href="/assets/js/122.86482a2b.js"><link rel="prefetch" href="/assets/js/123.a8e0a08e.js"><link rel="prefetch" href="/assets/js/124.fbf9392f.js"><link rel="prefetch" href="/assets/js/125.6d97864a.js"><link rel="prefetch" href="/assets/js/126.b74c11a5.js"><link rel="prefetch" href="/assets/js/13.35dad34e.js"><link rel="prefetch" href="/assets/js/14.4c12ba75.js"><link rel="prefetch" href="/assets/js/15.5ad1d0a8.js"><link rel="prefetch" href="/assets/js/16.9016882d.js"><link rel="prefetch" href="/assets/js/17.241510cf.js"><link rel="prefetch" href="/assets/js/18.2d3076aa.js"><link rel="prefetch" href="/assets/js/19.daa2cf74.js"><link rel="prefetch" href="/assets/js/20.7e6028b9.js"><link rel="prefetch" href="/assets/js/21.5c651d60.js"><link rel="prefetch" href="/assets/js/22.b70adde0.js"><link rel="prefetch" href="/assets/js/23.c9fedc59.js"><link rel="prefetch" href="/assets/js/24.60d8e7ad.js"><link rel="prefetch" href="/assets/js/25.0c3959cc.js"><link rel="prefetch" href="/assets/js/26.4c24d23a.js"><link rel="prefetch" href="/assets/js/27.2f8c8240.js"><link rel="prefetch" href="/assets/js/28.5568c70d.js"><link rel="prefetch" href="/assets/js/29.5878b10b.js"><link rel="prefetch" href="/assets/js/3.81c00a93.js"><link rel="prefetch" href="/assets/js/30.a99a448f.js"><link rel="prefetch" href="/assets/js/31.5c896b2e.js"><link rel="prefetch" href="/assets/js/32.4f871e23.js"><link rel="prefetch" href="/assets/js/33.c812fe8f.js"><link rel="prefetch" href="/assets/js/34.6acd62fa.js"><link rel="prefetch" href="/assets/js/35.f652a316.js"><link rel="prefetch" href="/assets/js/36.5d2172eb.js"><link rel="prefetch" href="/assets/js/37.f5f0ff49.js"><link rel="prefetch" href="/assets/js/38.ca5c8d85.js"><link rel="prefetch" href="/assets/js/39.43d8a8f3.js"><link rel="prefetch" href="/assets/js/4.323ab50c.js"><link rel="prefetch" href="/assets/js/40.0750890b.js"><link rel="prefetch" href="/assets/js/41.69bf1ddc.js"><link rel="prefetch" href="/assets/js/42.025c3e14.js"><link rel="prefetch" href="/assets/js/43.9937be17.js"><link rel="prefetch" href="/assets/js/44.0486b188.js"><link rel="prefetch" href="/assets/js/45.7e6f5b11.js"><link rel="prefetch" href="/assets/js/46.ad154e1b.js"><link rel="prefetch" href="/assets/js/47.0476fbee.js"><link rel="prefetch" href="/assets/js/48.a4205cb1.js"><link rel="prefetch" href="/assets/js/49.cb5ebdc5.js"><link rel="prefetch" href="/assets/js/5.c7e616d1.js"><link rel="prefetch" href="/assets/js/50.7116a913.js"><link rel="prefetch" href="/assets/js/51.b1caf5d3.js"><link rel="prefetch" href="/assets/js/52.d6122ef5.js"><link rel="prefetch" href="/assets/js/53.6cdbdf4e.js"><link rel="prefetch" href="/assets/js/54.eee92ec8.js"><link rel="prefetch" href="/assets/js/55.fe8825ab.js"><link rel="prefetch" href="/assets/js/56.ae76234b.js"><link rel="prefetch" href="/assets/js/57.3776658d.js"><link rel="prefetch" href="/assets/js/58.a3ce6905.js"><link rel="prefetch" href="/assets/js/59.3d961c4a.js"><link rel="prefetch" href="/assets/js/6.16b31894.js"><link rel="prefetch" href="/assets/js/60.74aa4cd4.js"><link rel="prefetch" href="/assets/js/61.d1a78130.js"><link rel="prefetch" href="/assets/js/62.271ea18b.js"><link rel="prefetch" href="/assets/js/63.ff98536b.js"><link rel="prefetch" href="/assets/js/64.6a3f1e09.js"><link rel="prefetch" href="/assets/js/65.ed93e065.js"><link rel="prefetch" href="/assets/js/66.2c580e1e.js"><link rel="prefetch" href="/assets/js/67.1ab2d0c1.js"><link rel="prefetch" href="/assets/js/68.e0666507.js"><link rel="prefetch" href="/assets/js/69.fda9b9ff.js"><link rel="prefetch" href="/assets/js/7.07539e81.js"><link rel="prefetch" href="/assets/js/70.a76c8845.js"><link rel="prefetch" href="/assets/js/71.c6b1276a.js"><link rel="prefetch" href="/assets/js/72.5a2eabb9.js"><link rel="prefetch" href="/assets/js/73.eb66f52d.js"><link rel="prefetch" href="/assets/js/74.b7458b07.js"><link rel="prefetch" href="/assets/js/75.5cba2351.js"><link rel="prefetch" href="/assets/js/76.0d1792db.js"><link rel="prefetch" href="/assets/js/77.9e2495ed.js"><link rel="prefetch" href="/assets/js/78.1fb3b0ef.js"><link rel="prefetch" href="/assets/js/79.d5624f8f.js"><link rel="prefetch" href="/assets/js/8.ab33dfe3.js"><link rel="prefetch" href="/assets/js/80.41988336.js"><link rel="prefetch" href="/assets/js/81.e04bd79e.js"><link rel="prefetch" href="/assets/js/83.1c34abab.js"><link rel="prefetch" href="/assets/js/84.412a7610.js"><link rel="prefetch" href="/assets/js/85.db7b7261.js"><link rel="prefetch" href="/assets/js/86.b2c22b42.js"><link rel="prefetch" href="/assets/js/87.6aa34b5d.js"><link rel="prefetch" href="/assets/js/88.9f6b1695.js"><link rel="prefetch" href="/assets/js/89.2e861ca5.js"><link rel="prefetch" href="/assets/js/9.dcd19ef1.js"><link rel="prefetch" href="/assets/js/90.eda5d2de.js"><link rel="prefetch" href="/assets/js/91.b9660e21.js"><link rel="prefetch" href="/assets/js/92.3e4fac30.js"><link rel="prefetch" href="/assets/js/93.d895800c.js"><link rel="prefetch" href="/assets/js/94.cf82f46d.js"><link rel="prefetch" href="/assets/js/95.ccbe7042.js"><link rel="prefetch" href="/assets/js/96.a2c2339e.js"><link rel="prefetch" href="/assets/js/97.1728e0a4.js"><link rel="prefetch" href="/assets/js/98.e0f4449b.js"><link rel="prefetch" href="/assets/js/99.1e34949c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.168efa49.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Self Study</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" class="nav-link">
+  Webpack
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Algorithm" class="dropdown-title"><span class="title">Algorithm</span> <span class="arrow down"></span></button> <button type="button" aria-label="Algorithm" class="mobile-dropdown-title"><span class="title">Algorithm</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Algorithm/DataStructure/" class="nav-link">
+  DataStructure
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Leetcode/" class="nav-link">
+  Leetcode
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Algorithm/" class="nav-link">
+  Algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/Math/" class="nav-link">
+  Math
+</a></li><li class="dropdown-item"><!----> <a href="/Algorithm/OperatingSystem/" class="nav-link">
+  OperatingSystem
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Interview" class="dropdown-title"><span class="title">Interview</span> <span class="arrow down"></span></button> <button type="button" aria-label="Interview" class="mobile-dropdown-title"><span class="title">Interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Interview/Core/" class="nav-link">
+  Core
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Designpattern/" class="nav-link">
+  Designpattern
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Senario/" class="nav-link">
+  Senario
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/SourceCode/" class="nav-link">
+  SourceCode
+</a></li><li class="dropdown-item"><!----> <a href="/Interview/Systemdesign/" class="nav-link">
+  Systemdesign
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Projects" class="dropdown-title"><span class="title">Projects</span> <span class="arrow down"></span></button> <button type="button" aria-label="Projects" class="mobile-dropdown-title"><span class="title">Projects</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Projects/webdesign/" class="nav-link">
+  webdesign
+</a></li><li class="dropdown-item"><!----> <a href="/Projects/xiaochengxu/" class="nav-link">
+  xiaochengxu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Usefull-tips" class="dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow down"></span></button> <button type="button" aria-label="Usefull-tips" class="mobile-dropdown-title"><span class="title">Usefull-tips</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Usefull-tips/chrome/" class="nav-link">
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/mac/" class="nav-link">
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/Usefull-tips/intellij/" class="nav-link">
+  intellij
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back-end" class="dropdown-title"><span class="title">back-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="back-end" class="mobile-dropdown-title"><span class="title">back-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/back-end/Java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/back-end/nodejs/" class="nav-link">
+  nodejs
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="front-end" class="dropdown-title"><span class="title">front-end</span> <span class="arrow down"></span></button> <button type="button" aria-label="front-end" class="mobile-dropdown-title"><span class="title">front-end</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front-end/Zepto/" class="nav-link">
+  Zepto
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/ES6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/front-end/Webpack/" class="nav-link">
+  Webpack
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/back-end/Java/" aria-current="page" class="sidebar-link">Intro</a></li><li><a href="/back-end/Java/1-JVM.html" class="sidebar-link">JVM</a></li><li><a href="/back-end/Java/2-variables.html" class="sidebar-link">常量和变量</a></li><li><a href="/back-end/Java/3-Loop-array-method.html" class="sidebar-link">Loop array and Method</a></li><li><a href="/back-end/Java/4-class.html" class="sidebar-link">Class and object</a></li><li><a href="/back-end/Java/Collection.html" class="sidebar-link">Collection</a></li><li><a href="/back-end/Java/Interface.html" class="sidebar-link">Interface</a></li><li><a href="/back-end/Java/Java8.html" aria-current="page" class="active sidebar-link">Java8</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#lambda" class="sidebar-link">Lambda</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#what-is-lambda" class="sidebar-link">What is Lambda</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#usage-of-lambda" class="sidebar-link">Usage of Lambda</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#implement-runnable-using-lambda" class="sidebar-link">Implement Runnable using Lambda</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#implement-comparator-with-lambda" class="sidebar-link">Implement comparator with lambda</a></li></ul></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#functional-interface" class="sidebar-link">Functional Interface</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#definition" class="sidebar-link">Definition:</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#functionalinterface" class="sidebar-link">@FunctionalInterface:</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#new-functional-interfaces-in-java8" class="sidebar-link">New Functional Interfaces in Java8</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#consumer" class="sidebar-link">Consumer</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#biconsumer" class="sidebar-link">BiConsumer</a></li></ul></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#stream" class="sidebar-link">Stream</a></li><li class="sidebar-sub-header"><a href="/back-end/Java/Java8.html#optional" class="sidebar-link">Optional</a></li></ul></li><li><a href="/back-end/Java/Multithreading.html" class="sidebar-link">Multithreading</a></li><li><a href="/back-end/Java/String.html" class="sidebar-link">String</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java8"><a href="#java8" class="header-anchor">#</a> Java8</h1> <h2 id="lambda"><a href="#lambda" class="header-anchor">#</a> Lambda</h2> <h3 id="what-is-lambda"><a href="#what-is-lambda" class="header-anchor">#</a> What is Lambda</h3> <ul><li><p><strong>Lambda</strong> is equivalent to a function (method) without a name</p></li> <li><p>Lambda's are also referred as Anonymous functions.</p> <ul><li>Method parameters</li> <li>Method Body</li> <li>Return Type</li></ul></li> <li><p>Lambdas are not tied to any class like a regular method</p></li> <li><p><strong>Lambda</strong> can also be assigned to variable and passed around.</p></li></ul> <h3 id="usage-of-lambda"><a href="#usage-of-lambda" class="header-anchor">#</a> Usage of Lambda</h3> <ul><li>Lambda is mainly used to implement Functional Interfaces(SAM).</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FunctionalInterface</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token class-name">T</span> o1<span class="token punctuation">,</span> <span class="token class-name">T</span> o2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@FunctionalInterface</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="implement-runnable-using-lambda"><a href="#implement-runnable-using-lambda" class="header-anchor">#</a> Implement Runnable using Lambda</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunnableLambdaExample</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token comment">/**
+         * Prior Java 8
+         */</span>
+
+        <span class="token class-name">Runnable</span> runnable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>runnable<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//Java 8 - Lambda Syntax</span>
+
+        <span class="token comment">// ()-&gt;{}</span>
+        <span class="token comment">//assigning a lambda to a variable.</span>
+
+        <span class="token class-name">Runnable</span> runnableLambda <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// you need {} for multiple statements</span>
+        <span class="token class-name">Runnable</span> runnableLambdaMultiStatements <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                                        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 3&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 3&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Runnable</span> runnableLambdaSimple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 3&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>runnableLambda<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>runnableLambdaMultiStatements<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>runnableLambdaSimple<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 3&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Runnable 4&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="implement-comparator-with-lambda"><a href="#implement-comparator-with-lambda" class="header-anchor">#</a> Implement comparator with lambda</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Comparator</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ComparatorLambda</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">compareTwoIntegers</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> comparator<span class="token punctuation">,</span> <span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> comparator<span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token comment">/**
+         * Prior JAVA 8
+         */</span>
+        <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> comparator  <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> o1<span class="token punctuation">,</span> <span class="token class-name">Integer</span> o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> o1<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>o2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0 -&gt; if both are equal</span>
+                                        <span class="token comment">// 1 -&gt; if o1 &gt; o2</span>
+                                        <span class="token comment">//-1 -&gt; if o1&lt;o2</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>comparator<span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">/**
+         * In JAVA 8
+         */</span>
+        <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> comparatorLambda <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Integer</span>  a<span class="token punctuation">,</span><span class="token class-name">Integer</span> b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> a<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// lambda is smart to know the type of argument</span>
+        <span class="token class-name">Comparator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> comparatorLambda1 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> a<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>comparatorLambda<span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token comment">/**
+         * Comparator chaining happens only when the first comparators result is zero.
+         */</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Result of chaining comparator is with equal inputs : &quot;</span> <span class="token operator">+</span> comparatorLambda1<span class="token punctuation">.</span><span class="token function">thenComparing</span><span class="token punctuation">(</span>comparatorLambda1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Result of chaining comparator is with not equal inputs: &quot;</span> <span class="token operator">+</span> comparatorLambda1<span class="token punctuation">.</span><span class="token function">thenComparing</span><span class="token punctuation">(</span>comparatorLambda1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>comparatorLambda1<span class="token punctuation">.</span><span class="token function">compare</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;The greatest integer is : &quot;</span> <span class="token operator">+</span> <span class="token function">compareTwoIntegers</span><span class="token punctuation">(</span>comparatorLambda<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="functional-interface"><a href="#functional-interface" class="header-anchor">#</a> Functional Interface</h2> <p>Functional Interfaces exists since java 1.0</p> <h3 id="definition"><a href="#definition" class="header-anchor">#</a> Definition:</h3> <p>A functional Interface(SAM) is an interface that has exactly one abstract method</p> <h3 id="functionalinterface"><a href="#functionalinterface" class="header-anchor">#</a> @FunctionalInterface:</h3> <ul><li>This annotation is introduced as part of the jdk 1.8</li> <li>Optional annotation to signify an interface as Functional Interface.</li></ul> <h3 id="new-functional-interfaces-in-java8"><a href="#new-functional-interfaces-in-java8" class="header-anchor">#</a> New Functional Interfaces in Java8</h3> <p>All Java8 new Functional Interfaces are in the <code>java.util.function</code></p> <ul><li>Consumer - BiConsumer</li> <li>Predicate - BiPredicate</li> <li>Function - BiFunction, UnaryOperator, BinaryOperator</li> <li>Supplier</li></ul> <h3 id="consumer"><a href="#consumer" class="header-anchor">#</a> Consumer</h3> <p>First we need a student class</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Optional</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> gradeLevel<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> gpa<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> gender<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> noteBooks<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Bike</span><span class="token punctuation">&gt;</span></span> bike<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Bike</span><span class="token punctuation">&gt;</span></span> <span class="token function">getBike</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> bike<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setBike</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Bike</span><span class="token punctuation">&gt;</span></span> bike<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>bike <span class="token operator">=</span> bike<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> gradeLevel<span class="token punctuation">,</span> <span class="token keyword">double</span> gpa<span class="token punctuation">,</span> <span class="token class-name">String</span> gender<span class="token punctuation">,</span> <span class="token keyword">int</span> noteBooks<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> activities<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gradeLevel <span class="token operator">=</span> gradeLevel<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gpa <span class="token operator">=</span> gpa<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>noteBooks <span class="token operator">=</span> noteBooks<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>activities <span class="token operator">=</span> activities<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getNoteBooks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> noteBooks<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setNoteBooks</span><span class="token punctuation">(</span><span class="token keyword">int</span> noteBooks<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>noteBooks <span class="token operator">=</span> noteBooks<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> gradeLevel<span class="token punctuation">,</span> <span class="token keyword">double</span> gpa<span class="token punctuation">,</span> <span class="token class-name">String</span> gender<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> activities<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gradeLevel <span class="token operator">=</span> gradeLevel<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gpa <span class="token operator">=</span> gpa<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>activities <span class="token operator">=</span> activities<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> s<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getGender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> gender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setGender</span><span class="token punctuation">(</span><span class="token class-name">String</span> gender<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getGradeLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> gradeLevel<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setGradeLevel</span><span class="token punctuation">(</span><span class="token keyword">int</span> gradeLevel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gradeLevel <span class="token operator">=</span> gradeLevel<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getGpa</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> gpa<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setGpa</span><span class="token punctuation">(</span><span class="token keyword">double</span> gpa<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>gpa <span class="token operator">=</span> gpa<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> activities <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span>  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">getActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>activities<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setActivities</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> activities<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>activities <span class="token operator">=</span> activities<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printListOfActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;List of Activities are : &quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>activities<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Student{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, gradeLevel=&quot;</span> <span class="token operator">+</span> gradeLevel <span class="token operator">+</span>
+                <span class="token string">&quot;, gpa=&quot;</span> <span class="token operator">+</span> gpa <span class="token operator">+</span>
+                <span class="token string">&quot;, gender='&quot;</span> <span class="token operator">+</span> gender <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, activities=&quot;</span> <span class="token operator">+</span> activities <span class="token operator">+</span>
+                <span class="token string">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>Then we have student database class which has all student data</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Optional</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>function<span class="token punctuation">.</span></span><span class="token class-name">Supplier</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentDataBase</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Supplier</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> studentSupplier <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span>  <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Adam&quot;</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4.0</span><span class="token punctuation">,</span><span class="token string">&quot;male&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;basketball&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;volleyball&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Optional</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">getOptionalStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Adam&quot;</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4.0</span><span class="token punctuation">,</span><span class="token string">&quot;male&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;basketball&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;volleyball&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Bike</span> bike <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bike</span><span class="token punctuation">(</span><span class="token string">&quot;Client123&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Client123&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        student<span class="token punctuation">.</span><span class="token function">setBike</span><span class="token punctuation">(</span><span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>bike<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">/**
+     * Total of 6 students in the database.
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAllStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token comment">/**
+         * 2nd grade students
+         */</span>
+        <span class="token class-name">Student</span> student1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Adam&quot;</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3.6</span><span class="token punctuation">,</span> <span class="token string">&quot;male&quot;</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;basketball&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;volleyball&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Student</span> student2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Jenny&quot;</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3.8</span><span class="token punctuation">,</span><span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;gymnastics&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;soccer&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">/**
+         * 3rd grade students
+         */</span>
+        <span class="token class-name">Student</span> student3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Emily&quot;</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4.0</span><span class="token punctuation">,</span><span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;gymnastics&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;aerobics&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Student</span> student4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Dave&quot;</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4.0</span><span class="token punctuation">,</span><span class="token string">&quot;male&quot;</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;gymnastics&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;soccer&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">/**
+         * 4th grade students
+         */</span>
+        <span class="token class-name">Student</span> student5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;Sophia&quot;</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3.5</span><span class="token punctuation">,</span><span class="token string">&quot;female&quot;</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;dancing&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;football&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Student</span> student6 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3.9</span><span class="token punctuation">,</span><span class="token string">&quot;male&quot;</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;swimming&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;basketball&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;baseball&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;football&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>student1<span class="token punctuation">,</span>student2<span class="token punctuation">,</span>student3<span class="token punctuation">,</span>student4<span class="token punctuation">,</span>student5<span class="token punctuation">,</span>student6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> students<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>learnJava<span class="token punctuation">.</span>data<span class="token punctuation">.</span></span><span class="token class-name">Student</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>learnJava<span class="token punctuation">.</span>data<span class="token punctuation">.</span></span><span class="token class-name">StudentDataBase</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>function<span class="token punctuation">.</span></span><span class="token class-name">Consumer</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConsumerExample</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">static</span> <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span>  c1<span class="token operator">=</span> p <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">static</span> <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span>  c2<span class="token operator">=</span> p <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">static</span> <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span>  c3<span class="token operator">=</span> p <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span><span class="token function">getActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> personList <span class="token operator">=</span> <span class="token class-name">StudentDataBase</span><span class="token punctuation">.</span><span class="token function">getAllStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// forEach accept consumer implementation</span>
+        personList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>c1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">printNameAndActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;printNameAndActivities : &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> personList <span class="token operator">=</span> <span class="token class-name">StudentDataBase</span><span class="token punctuation">.</span><span class="token function">getAllStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        personList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>c2<span class="token punctuation">.</span><span class="token function">andThen</span><span class="token punctuation">(</span>c3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">printNameAndActivitiesUsingCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;printNameAndActivitiesUsingCondition : &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> personList <span class="token operator">=</span> <span class="token class-name">StudentDataBase</span><span class="token punctuation">.</span><span class="token function">getAllStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        personList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> s<span class="token punctuation">.</span><span class="token function">getGradeLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">3</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">.</span><span class="token function">getGpa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">3.9</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment">// what if c2.andThen(c3).andThen(c1).accept(s);</span>
+                c2<span class="token punctuation">.</span><span class="token function">andThen</span><span class="token punctuation">(</span>c3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> c1 <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        c1<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token string">&quot;java8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printNameAndActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printNameAndActivitiesUsingCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="biconsumer"><a href="#biconsumer" class="header-anchor">#</a> BiConsumer</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>function<span class="token punctuation">.</span></span><span class="token class-name">BiConsumer</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>function<span class="token punctuation">.</span></span><span class="token class-name">Consumer</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BiConsumerExample</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">nameAndActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> studentBiConsumer <span class="token operator">=</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> activities<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name <span class="token operator">+</span> <span class="token string">&quot; : &quot;</span> <span class="token operator">+</span> activities<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> stringConsumer <span class="token operator">=</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;name is  :&quot;</span> <span class="token operator">+</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> <span class="token class-name">StudentDataBase</span><span class="token punctuation">.</span><span class="token function">getAllStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// compare the diff between BiConsumer and Consumer</span>
+        students<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> studentBiConsumer<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>s<span class="token punctuation">.</span><span class="token function">getActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+
+        <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> biConsumer <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot; a : &quot;</span>  <span class="token operator">+</span>  a <span class="token operator">+</span> <span class="token string">&quot; b : &quot;</span> <span class="token operator">+</span> b <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        biConsumer<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token string">&quot;java7&quot;</span> <span class="token punctuation">,</span> <span class="token string">&quot;java8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> multiply <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Multiplication : &quot;</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+        <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> addition <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Addition : &quot;</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> division <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Division : &quot;</span>  <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">/</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+        multiply<span class="token punctuation">.</span><span class="token function">andThen</span><span class="token punctuation">(</span>addition<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">andThen</span><span class="token punctuation">(</span>division<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token function">nameAndActivities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  *下单商品信息对象
+  */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sku</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 编号</span>
+  <span class="token keyword">private</span> <span class="token class-name">Integer</span> skuId<span class="token punctuation">;</span>
+  <span class="token comment">// 商品名称</span>
+  <span class="token keyword">private</span> <span class="token class-name">String</span> skuName<span class="token punctuation">;</span>
+  <span class="token comment">// 单价</span>
+  <span class="token keyword">private</span> <span class="token class-name">Double</span> skuPrice<span class="token punctuation">;</span>
+  <span class="token comment">// 购买个数</span>
+  <span class="token keyword">private</span> <span class="token class-name">Integer</span> totalNum<span class="token punctuation">;</span>
+  <span class="token comment">// 总价</span>
+  <span class="token keyword">private</span> <span class="token class-name">Double</span> totalPrice<span class="token punctuation">;</span>
+  <span class="token comment">// 商品类型</span>
+  <span class="token keyword">private</span> <span class="token class-name">Enum</span> skuCategory<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token class-name">Sku</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> skuId<span class="token punctuation">,</span> <span class="token class-name">String</span> skuName<span class="token punctuation">,</span>
+            <span class="token class-name">Double</span> skuPrice<span class="token punctuation">,</span> <span class="token class-name">Integer</span> totalNum<span class="token punctuation">,</span>
+            <span class="token class-name">Double</span> totalPrice<span class="token punctuation">,</span> <span class="token class-name">Enum</span> skuCategory<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>skuId <span class="token operator">=</span> skuId<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>skuName <span class="token operator">=</span> skuName<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>skuPrice <span class="token operator">=</span> skuPrice<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>totalNum <span class="token operator">=</span> totalNum<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>totalPrice <span class="token operator">=</span> totalPrice<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>skuCategory <span class="token operator">=</span> skuCategory<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// todo</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CartService</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Sku</span><span class="token punctuation">&gt;</span></span> cartSkuList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Sku</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="stream"><a href="#stream" class="header-anchor">#</a> Stream</h2> <h2 id="optional"><a href="#optional" class="header-anchor">#</a> Optional</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/back-end/Java/Interface.html" class="prev">
+        Interface
+      </a></span> <span class="next"><a href="/back-end/Java/Multithreading.html">
+        Multithreading
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.36d4b3ff.js" defer></script><script src="/assets/js/2.ac6f8352.js" defer></script><script src="/assets/js/82.7698341f.js" defer></script>
+  </body>
+</html>
