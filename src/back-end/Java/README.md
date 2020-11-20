@@ -38,3 +38,8 @@ export PATH
 ```
 
 如果想让zshrc文件立即生效需要使用`source .zshrc`
+
+看所有Java 版本
+:::shell
+/usr/libexec/java_home -V 
+:::
