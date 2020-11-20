@@ -233,7 +233,6 @@ High level modules should not depend upon low level modules. Both should depend 
 2. 构造注入
 
 ```java
-```java
 public class IC {
   public void print() {
     System.out.println("ic");
@@ -258,5 +257,4 @@ public class A {
     this.ic = ic;
   }
 }
-```
 ```
