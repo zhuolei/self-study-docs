@@ -233,17 +233,25 @@ High level modules should not depend upon low level modules. Both should depend 
 2. 构造注入
 
 ```java
-public class IC {
-  public void print() {
-    System.out.println("ic");
-  }
+public interface IC {
+  public void print()
 }
 
+public class C implements IC{
+  @Override
+  public void print() {
+    System.out.print("C")
+  }
+}
 public class A {
+  // 面对的是接口而不是具体类
   private IC ic;
 
+  public A() {
+
+  }
   // 构造注入
-  public A (IC ic) {
+  public A(IC ic) {
     this.ic = ic;
   }
 
@@ -258,3 +266,22 @@ public class A {
   }
 }
 ```
+
+#### 容器的作用是在装配对象 （类即为容器）
+
+```java
+public class Container {
+  public void getBean() {
+    IC ic = new C();
+    // 构造注入
+    A a = new A(ic);
+    A a2 = new A();
+    // 属性注入
+    a2.setIc(ic);
+  }
+}
+```
+
+:::tip
+原来的主控类是A，但这里是Container 所以实现了控制反转
+:::
