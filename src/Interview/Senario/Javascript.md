@@ -474,3 +474,30 @@ for ( var prop in obj2 ) {
     }
 }
 ```
+
+## Promise 封装wx.request
+
+```js
+// currying
+// 传入函数作为变量在动态语言中非常常见 python
+// 代理模式
+const promisic = (fn) => {
+  return function(params = {}) {
+    return new Promise((resolve, reject) => {
+      const args = Object.assign(params, {
+        success:(res) => {
+          resolve(res)
+        },
+        fail:(error) => {
+          reject(error);
+        }
+      })
+      fn(args);
+    })
+  }
+}
+
+export {
+  promisic
+}
+```
