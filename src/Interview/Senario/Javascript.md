@@ -301,27 +301,176 @@ const obj = urlList.find(x => locale in x);
 export const isObjectEmpty = obj => !obj ? true : Object.keys(obj).length === 0 && obj.constructor === object;
 ```
 
-## How to flatten an object?
+## How to check a value is object
+
+### with `Array.isArray`
+```js
+function isObject(o) {
+  return o !== null && typeof o === 'object' && Array.isArray(o) === false;
+}
+```
+
+### without `Array.isArray`
+```js
+function isObject(o) {
+  return o instanceof Object && o.constructor === Object;
+}
+```
+
+result:
+```js
+console.log(isObject({}));             // Will return: true
+console.log(isObject([]));             // Will return: false
+console.log(isObject(null));           // Will return: false
+console.log(isObject(/.*/));           // Will return: false
+console.log(isObject(function () {})); // Will return: false
+```
+
+In case you need to verify that object is instance of particular class you have to check constructor with your particular class, like:
 
 ```js
-export default class {
-  static flattenObject(object) {
-    const merge = object => {
-      const out = {};
-
-      object.forEach(obj => {
-        Object.keys(obj).forEach(key => {
-          out[key] = obj[key];
-        })
-      })
-
-      return out;
-    }
-
-    const flatten = (obj, name, stem, isArray = false) => {
-      
-    }
-  }
+function isDate(o) {
+  return o instanceof Object && o.constructor === Date;
 }
 
+var d = new Date();
+console.log(isObject(d)); // Will return: false
+console.log(isDate(d));   // Will return: true
+```
+
+In case you won't create functions like isDate, isError, isRegExp, etc you may consider option to use this generalized functions:
+
+```js
+function isFunction(o) {
+  return o instanceof Object && typeof o.constructor === 'function';
+}
+```
+
+`isObject` won't work in case of `Object.create(null)` because of internal implementation of Object.create which is explained here but you can use isObject in more sophisticated implementation:
+
+```js
+function isObject(o, strict = true) {
+  if (o === null || o === undefined) {
+    return false;
+  }
+  const instanceOfObject = o instanceof Object;
+  const typeOfObject = typeof o === 'object';
+  const constructorUndefined = o.constructor === undefined;
+  const constructorObject = o.constructor === Object;
+  const typeOfConstructorObject = typeof o.constructor === 'function';
+  let r;
+  if (strict === true) {
+    r = (instanceOfObject || typeOfObject) && (constructorUndefined || constructorObject);
+  } else {
+    r = (constructorUndefined || typeOfConstructorObject); //存疑
+  }
+  return r;
+};
+```
+
+## How to check if an Object has Property
+
+### hasOwnProperty
+The method name `hasOwnProperty()` suggests that it looks in the own properties of the object. The own properties are those defined directly upon the object.
+```js
+const hero = {
+  name: 'Batman'
+};
+
+hero.hasOwnProperty('name');     // => true
+hero.hasOwnProperty('realName'); // => false
+
+const hero = {
+  name: 'Batman'
+};
+
+hero.toString; // => function() {...}
+
+hero.hasOwnProperty('toString'); // => false
+```
+
+### in operator
+
+```js
+const hero = {
+  name: 'Batman'
+};
+
+'name' in hero;     // => true
+'realName' in hero; // => false
+```
+
+The main difference between hasOwnProperty() method and in operator is that the latter checks within own and inherited properties of the object.
+
+That’s why, in contrast to `hasOwnProperty()`, the in operator detects that hero object contains the inherited property toString:
+
+```js
+const hero = {
+  name: 'Batman'
+};
+
+hero.toString; // => function() {...}
+
+'toString' in hero;              // => true
+hero.hasOwnProperty('toString'); // => false
+```
+
+It depends on what you're looking for. If you want to know if an object physically contains a property (and it is not coming from somewhere up on the prototype chain) then object.hasOwnProperty is the way to go. All modern browsers support it. (It was missing in older versions of Safari - 2.0.1 and older - but those versions of the browser are rarely used any more.)
+
+If what you're looking for is if an object has a property on it that is iterable (when you iterate over the properties of the object, it will appear) then doing: prop in object will give you your desired effect.
+
+Since using hasOwnProperty is probably what you want, and considering that you may want a fallback method, I present to you the following solution:
+
+```js
+var obj = {
+    a: undefined,
+    b: null,
+    c: false
+};
+
+// a, b, c all found
+for ( var prop in obj ) {
+    document.writeln( "Object1: " + prop );
+}
+
+function Class(){
+    this.a = undefined;
+    this.b = null;
+    this.c = false;
+}
+
+Class.prototype = {
+    a: undefined,
+    b: true,
+    c: true,
+    d: true,
+    e: true
+};
+
+var obj2 = new Class();
+
+// a, b, c, d, e found
+for ( var prop in obj2 ) {
+    document.writeln( "Object2: " + prop );
+}
+
+function hasOwnProperty(obj, prop) {
+    var proto = obj.__proto__ || obj.constructor.prototype;
+    return (prop in obj) &&
+        (!(prop in proto) || proto[prop] !== obj[prop]);
+}
+
+if ( Object.prototype.hasOwnProperty ) {
+    var hasOwnProperty = function(obj, prop) {
+        return obj.hasOwnProperty(prop);
+    }
+}
+
+// a, b, c found in modern browsers
+// b, c found in Safari 2.0.1 and older
+for ( var prop in obj2 ) {
+    if ( hasOwnProperty(obj2, prop) ) {
+        document.writeln( "Object2 w/ hasOwn: " + prop );
+    }
+}
 ```
