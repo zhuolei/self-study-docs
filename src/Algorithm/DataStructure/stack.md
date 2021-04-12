@@ -22,6 +22,73 @@
 :::tip
 栈顶即为数组末尾
 :::
+## Java中的stack
+![img](~@pic/img/stack-1.png)
+
+- boolean empty() 
+- synchronized Object peek()
+- synchronized Object pop()
+- Object push(Object element)
+- synchronized int search(Object element) 返回对象在堆栈中的位置，以 1 为基数。
+
+```java
+import java.util.*;
+ 
+public class StackDemo {
+ 
+    static void showpush(Stack<Integer> st, int a) {
+        st.push(new Integer(a));
+        System.out.println("push(" + a + ")");
+        System.out.println("stack: " + st);
+    }
+ 
+    static void showpop(Stack<Integer> st) {
+        System.out.print("pop -> ");
+        Integer a = (Integer) st.pop();
+        System.out.println(a);
+        System.out.println("stack: " + st);
+    }
+ 
+    public static void main(String args[]) {
+        Stack<Integer> st = new Stack<Integer>();
+        System.out.println("stack: " + st);
+        showpush(st, 42);
+        showpush(st, 66);
+        showpush(st, 99);
+        showpop(st);
+        showpop(st);
+        showpop(st);
+        try {
+            showpop(st);
+        } catch (EmptyStackException e) {
+            System.out.println("empty stack");
+        }
+    }
+}
+```
+
+以上实例编译运行结果如下：
+```java
+stack: [ ]
+push(42)
+stack: [42]
+push(66)
+stack: [42, 66]
+push(99)
+stack: [42, 66, 99]
+pop -> 99
+stack: [42, 66]
+pop -> 66
+stack: [42]
+pop -> 42
+stack: [ ]
+pop -> empty stack
+```
+
+:::warning
+<a href="https://stackoverflow.com/questions/31156067/java-stack-peek-behavior">Java Stack peek() behavior</a>
+:::
+
 ## Javascript实现
 
 ### Using Array
