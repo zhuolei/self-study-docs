@@ -18,10 +18,10 @@
     "vuepress-plugin-export": "^0.2.0"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^5.0.0",
     "rimraf": "^3.0.2",
-    "sass-loader": "^8.0.2",
-    "vuepress": "^1.5.4",
+    "sass-loader": "^11.0.1",
+    "vuepress": "^1.8.2",
     "vuepress-plugin-demo-code": "^0.5.2"
   }
 }
