@@ -12,13 +12,131 @@
 ```
 ## Basic 
 
-### 617. Merge Two Binary Trees
+### 剑指 Offer 55 - I. 二叉树的深度
+<a href="https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/" target="_blank">Link</a>
+
+输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。
+
+例如：
+
+给定二叉树 `[3,9,20,null,null,15,7]`，
+
+![img](~@pic/img/leetcode55-1.png)
+
+#### 解题思路:
+
+<a href="https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/solution/mian-shi-ti-55-i-er-cha-shu-de-shen-du-xian-xu-bia/" target="_blank">关键点： 此树的深度和其左（右）子树的深度之间的关系。显然，此树的深度 等于 左子树的深度 与 右子树的深度 中的 最大值 +1+1</a>
+
+- 终止条件： 当 root​ 为空，说明已越过叶节点，因此返回 深度 00 。
+- 递推工作： 本质上是对树做后序遍历。
+ - 计算节点 root​ 的 左子树的深度 ，即调用 `maxDepth(root.left)`；
+ - 计算节点 root​ 的 右子树的深度 ，即调用 `maxDepth(root.right)`；
+- 返回值： 返回 此树的深度 ，即 `max(maxDepth(root.left), maxDepth(root.right)) + 1`。
+
+#### 递归
+```java
+class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root == null) return 0;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
+}
+```
+
+#### BFS
+```java
+public int maxDepth(TreeNode root) {
+    if (root == null) return 0;
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.add(root);
+    int res = 0;
+    while (!queue.isEmpty()) {
+        res++;
+        int n = queue.size();
+        for (int i = 0; i < n; i++) {
+            TreeNode node = queue.poll();
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
+        }
+    }
+    return res;
+}
+```
+
+### 面试题 04.02. 最小高度树
+<a href="https://leetcode-cn.com/problems/minimum-height-tree-lcci/" target="_blank">Link</a>
+
+给定一个有序整数数组，元素各不相同且按升序排列，编写一个算法，创建一棵高度最小的二叉搜索树。
+
+![img](~@pic/img/leetcode0402.png)
+
+<a href="https://leetcode-cn.com/problems/minimum-height-tree-lcci/solution/di-gui-gou-jian-by-zui-weng-jiu-xian/" target="_blank">递归构建</a>
+
+```java
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return helper(nums, 0, nums.length - 1);
+    }
+
+    public TreeNode helper(int[] nums, int low, int high) {
+        if (low > high) {   // low > high表示子数组为空
+            return null;
+        }
+        // 以mid作为根节点
+        // 需要加+1
+        int mid = (high - low + 1) / 2 + low;
+        TreeNode root = new TreeNode(nums[mid]);
+        // 左子数组[low, mid -1]构建左子树
+        root.left = helper(nums, low, mid - 1);
+        // 右子数组[mid + 1, high]构建右子树
+        root.right = helper(nums,mid + 1, high);
+        return root;
+    }
+}
+```
+
+算法分析
+- 数组中的元素都使用1次，时间复杂度为O(n)O(n).
+- 递归使用栈辅助空间，空间复杂度O(log(n)).
+
+### 1469. 寻找所有的独生节点
+
+二叉树中，如果一个节点是其父节点的唯一子节点，则称这样的节点为 “独生节点” 。二叉树的根节点不会是独生节点，因为它没有父节点。
+
+给定一棵二叉树的根节点 root ，返回树中 *所有的独生节点的值所构成的数组* 。数组的顺序 *不限* 。
+
+![img](~@pic/img/leetcode1469-1.png)
+![img](~@pic/img/leetcode1469-2.png)
+![img](~@pic/img/leetcode1469-3.png)
+
+```java
+class Solution {
+    public List<Integer> getLonelyNodes(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        if(root == null || (root.left == null && root.right == null)) return ans;
+        helper(root, ans);
+        return ans;
+    }
+
+    public void helper(TreeNode root, List<Integer> ans) {
+        if(root == null || (root.left == null && root.right == null)) return;
+
+        if (root.left != null && root.right == null) ans.add(root.left.val);
+        if (root.left == null && root.right != null) ans.add(root.right.val);
+        
+        if (root.left != null) helper(root.left, ans);
+        if (root.right != null) helper(root.right, ans);
+    }
+}
+```
+
+### 617. Merge Two Binary Trees (合并二叉树)
 
 <a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank">Link</a>
 
-Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.
+给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
 
-You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.
+你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
 
 **Example 1:**
 
